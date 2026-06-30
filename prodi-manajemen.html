@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S1 Manajemen - Institut Asyifa Indonesia (IASI)</title>
+
+    <link rel="shortcut icon" href="assets/icon/iasi.png" type="image/png">
+
+    <link rel="stylesheet" href="dist/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  </head>
+  <body>
+    
+    <div class="navbar">
+      <div class="container">
+        <div class="navbar-box">
+          <div class="logo">
+            <a href="index.html">
+              <img src="assets/images/iasi.png" alt="Logo IASI">
+            </a>
+          </div>
+          <button class="menu-toggle" id="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <ul class="menu" id="navbar-menu">
+            <li><a href="index.html#beranda">Beranda</a></li>
+            <li class="dropdown">
+              <a href="index.html#tentang" class="dropdown-toggle">Profil <i class="fa-solid fa-chevron-down"></i></a>
+              <ul class="submenu">
+                <li><a href="sejarah.html">Sejarah IASI</a></li>
+                <li><a href="visi-misi.html">Visi Misi</a></li>
+                <li><a href="pimpinan.html">Pimpinan</a></li>
+                <li><a href="dosen.html">Dosen</a></li>
+                <li><a href="akreditasi.html">Akreditasi</a></li>
+                <li><a href="fasilitas.html">Fasilitas</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="index.html#akademik" class="dropdown-toggle">Akademik <i class="fa-solid fa-chevron-down"></i></a>
+              <ul class="submenu">
+                <li><a href="index.html#akademik">Prodi</a></li>
+                <li><a href="kalender.html">Kalender Akademik</a></li>
+              </ul>
+            </li>
+            <li><a href="index.html#pmb">PMB</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="prodi-page manajemen-theme">
+      <div class="container">
+        
+        <div class="prodi-header" data-aos="fade-up" data-aos-duration="1000">
+          <span class="badge-jenjang">Program Studi S1</span>
+          <h1>Manajemen</h1>
+          <p>Membentuk manajer, pemimpin bisnis, dan wirausahawan global yang inovatif, kompeten, dan adaptif terhadap transformasi digital.</p>
+        </div>
+
+        <div class="prodi-section sambutan-kaprodi" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <div class="kaprodi-flex">
+            <div class="kaprodi-img">
+              <img src="assets/images/manajemen.jpeg" alt="Kaprodi Manajemen" />
+            </div>
+            <div class="sambutan-text">
+              <h2>Sambutan Ketua Program Studi</h2>
+              <p>
+                <em>Assalamualaikum wr. wb.</em><br/><br/>
+                Selamat datang di Program Studi S1 Manajemen Institut Asyifa Indonesia. Di era disrupsi bisnis dan ekonomi digital ini, kebutuhan akan talenta kepemimpinan yang adaptif, visioner, dan lincah menjadi sangat krusial. Kami di sini hadir untuk membekali Anda dengan fondasi teori manajemen yang kuat serta implementasi praktis yang fokus pada inovasi bisnis dan ekosistem kewirausahaan nyata. Dengan kurikulum yang integratif dan kemitraan industri yang luas, kami siap menemani langkah Anda tumbuh menjadi profesional atau kreator bisnis yang berdampak luas bagi perekonomian nasional maupun global.<br/><br/>
+                <em>Wassalamualaikum wr. wb.</em>
+              </p>
+              <h3>Pahmi Saroja, S.E., M.M.</h3>
+              <p class="jabatan">Ketua Program Studi S1 Manajemen</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="prodi-grid-vmt">
+          <div class="prodi-vmt-card" data-aos="fade-up" data-aos-duration="1000">
+            <h2><i class="fa-solid fa-eye"></i> Visi Prodi</h2>
+            <p class="visi-text">"Menjadi program studi yang unggul dan inovatif dalam bidang Manajemen dengan focus pada pengembangan kewirausahaan, menghasilkan lulusan yang mampu menciptakan pengelolaan bisnis berkelanjutan dan berdaya saing global pada tahun 2035".</p>
+          </div>
+
+          <div class="prodi-vmt-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+            <h2><i class="fa-solid fa-bullseye"></i> Misi Prodi</h2>
+            <ol>
+              <li>Menyenggarakan pendidikan dan pelatihan berkualitas di bidang manajemen dan kewirausahaan untuk mencetak pemimpin bisnis yang visioner dan kreatif.</li>
+              <li>Mengembangkan riset dan inovasi dalam bidang kewirausahaan yang berkontribusi terhadap pengembangan ekonomi lokal, nasional, dan internasional.</li>
+              <li>Menjalin kemitraan dengan dunia usaha, pemerintah, dan lembaga pendidikan lain untuk mendukung pengembangan kewirausahaan dan menciptakan peluang bisnis baru.</li>
+              <li>Menerapkan prinsip keberlanjutan dalam setiap aspek pembelajaran kewirausahaan untuk menciptakan bisnis yang ramah lingkungan dan sosial.</li>
+            </ol>
+          </div>
+
+          <div class="prodi-vmt-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <h2><i class="fa-solid fa-crosshairs"></i> Tujuan Prodi</h2>
+            <ol>
+              <li>Membekali mahasiswa dengan keterampilan praktis dalam merancang, mengelola, dan mengembangkan usaha yang berbasis pada kreativitas dan inovasi.</li>
+              <li>Mendorong mahasiswa untuk berinovasi dan berpikir kreatif dalam menciptakan peluang usaha, serta memahami dinamika pasar yang terus berkembang.</li>
+              <li>Memberikan pemahaman yang kuat tentang teori manajemen, serta aplikasi praktisnya dalam konteks kewirausahaan, baik di tingkat lokal maupun internasional.</li>
+              <li>Mengembangkan kemampuan mahasiswa untuk menganalisis pasar, strategi bisnis, dan membuat keputusan yang tepat dalam mengelola usaha.</li>
+              <li>Membekali mahasiswa dengan keterampilan kepemimpinan yang diperlukan untuk memimpin tim dan perusahaan di dunia bisnis yang kompetitif.</li>
+              <li>Menghubungkan mahasiswa dengan dunia industri untuk menciptakan peluang magang, kolaborasi, dan pengembangan bisnis nyata.</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="prodi-section kurikulum" data-aos="fade-up" data-aos-duration="1000">
+          <h2><i class="fa-solid fa-book-open"></i> Struktur Kurikulum & Distribusi Mata Kuliah</h2>
+          <p class="kurikulum-intro">Berikut merupakan sebaran beban studi mata kuliah program studi S1 Manajemen (Total SKS Keseluruhan: 145 SKS, Teori: 129 SKS, Praktek: 16 SKS):</p>
+
+          <div class="kurikulum-grid">
+            
+            <div class="semester-box">
+              <h3>Semester 1</h3>
+              <div class="table-responsive">
+                <table>
+                  <thead>
+                    <tr><th>Mata Kuliah</th><th class="center">T</th><th class="center">P</th><th class="center">Jml</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Pendidikan Agama Islam</td><td class="center">2</td><td class="center">0</td><td class="center">2</td></tr>
+                    <tr><td>Pendidikan Pancasila</td><td class="center">2</td><td class="center">0</td><td class="center">2</td></tr>
+                    <tr><td>Pengantar Ilmu Komputer</td><td class="center">1</td><td class="center">2</td><td class="center">3</td></tr>
+                    <tr><td>Matematika Bisnis I</td><td class="center">3</td><td class="center">0</td><td class="center">3</td></tr>
+                    <tr><td>Pengantar Teori Ekonomi</td><td class="center">3</td><td class="center">0</td><td class="center">3</td></tr>
+                    <tr><td>Pengantar Manajemen</td><td class="center">3</td><td class="center">0</td><td class="center">3</td></tr>
+                    <tr><td>Pengantar Akuntansi</td><td class="center">3</td><td class="center">0</td><td class="center">3</td></tr>
+                    <tr class="total-row"><td>TOTAL SKS</td><td class="center">17</td><td class="center">2</td><td class="center">19</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="semester-box">
+              <h3>Semester 2</h3>
+              <div class="table-responsive">
+                <table>
+                  <thead>
+                    <tr><th>Mata Kuliah</th><th class="center">T</th><th class="center">P</th><th class="center">Jml</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Bahasa Inggris Bisnis</td><td class="center">3</td><td class="center">0</td><td class="center">3</td></tr>
+                    <tr><td>Pendidikan Kewarganegaraan</td><td class="center">2</td><td class="center">0</td><td class="center">2</td></tr>
+                    <tr><td>Aspek Hukum Dalam Bisnis</td><td class="center">3</td><td class="center">0</td><td class="center">3</td></tr>
+                    <tr><td>Bahasa Indonesia</td><td class="center">2</td><td class="center">0</td><td class="center">2</td></tr>
+                    <tr><td>Statistika Bisnis 1</td><td class="center">3</td><td class="center">0</td><td class="center">3</td></tr>
+                    <tr><td>Matematika Bisnis II</td><td class="center">3</td><td class="center">0</td><td class="center">3</td></tr>
+                    <tr><td>Pengantar Bisnis</td><td class="center">3</td><td class="center">0</td><td class="center">3</td></tr>
+                    <tr class="total-row"><td>TOTAL SKS</td><td class="center">19</td><td class="center">0</td><td class="center">19</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="semester-box">
+              <h3>Semester 3</h3>
+              <div class="table-responsive">
+                <table>
+                  <thead>
+                    <tr><th>Mata Kuliah</th><th class="center">T</th><th class="center">P</th><th class="center">Jml</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Etika Bisnis</td><td class="center">3</td><td class="center">0</td><td class="center">3</td></tr>
+                    <tr><td>Manajemen Sumber Daya Manusia</td><td class="center">3</td><td class="center">0</td><td class="center">3</td></tr>
+                    <tr><td>Manajemen Keuangan</td><td class="center">3</td><td class="center">0</td><td class="center">3</td></tr>
+                    <tr><td>Manajemen Pemasaran</td><td class="center">3</td><td class="center">0</td><td class="center">3</td></tr>
+                    <tr><td>Akuntansi Biaya</td><td class="center">3</td><td class="center">0</td><td class="center">3</td></tr>
+                    <tr><td>Komunikasi Bisnis</td><td class="center">3</td><td class="center">0</td><td class="center">3</td></tr>
+                    <tr><td>Manajemen Operasional</td><td class="center">3</td><td class="center">0</td><td class="center">3</td></tr>
+                    <tr class="total-row"><td>TOTAL SKS</td><td class="center">21</td><td class="center">0</td><td class="center">21</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="semester-box">
+              <h3>Semester 4</h3>
+              <div class="table-responsive">
+                <table>
+                  <thead>
+                    <tr><th>Mata Kuliah</th><th class="center">T</th><th class="center">P</th><th class="center">Jml</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Manajemen Koperasi dan UKM</td><td class="center">3</td><td class="center">0</td><td class="center">3</td></tr>
+                    <tr><td>Kewirausahaan</td><td class="center">3</td><td class="center">0</td><td class="center">3</td></tr>
+                    <tr><td>Metode Kuantitatif Dalam Bisnis</td><td class="center">3</td><td class="center">0</td><td class="center">3</td></tr>
+                    <tr><td>Perpajakan</td><td class="center">3</td><td class="center">0</td><td class="center">3</td></tr>
+                    <tr><td>Manajemen Risiko</td><td class="center">3</td><td class="center">0</td><td class="center">3</td></tr>
+                    <tr><td>Perilaku Organisasi</td><td class="center">3</td><td class="center">0</td><td class="center">3</td></tr>
+                    <tr><td>Akuntansi Manajemen</td><td class="center">3</td><td class="center">0</td><td class="center">3</td></tr>
+                    <tr class="total-row"><td>TOTAL SKS</td><td class="center">21</td><td class="center">0</td><td class="center">21</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="semester-box">
+              <h3>Semester 5</h3>
+              <div class="table-responsive">
+                <table>
+                  <thead>
+                    <tr><th>Mata Kuliah</th><th class="center">T</th><th class="center">P</th><th class="center">Jml</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Kepemimpinan</td><td class="center">3</td><td class="center">0</td><td class="center">3</td></tr>
+                    <tr><td>Budaya Organisasi</td><td class="center">3</td><td class="center">0</td><td class="center">3</td></tr>
+                    <tr><td>Sistem Informasi Manajemen</td><td class="center">3</td><td class="center">0</td><td class="center">3</td></tr>
+                    <tr><td>Pemasaran Digital</td><td class="center">3</td><td class="center">0</td><td class="center">3</td></tr>
+                    <tr><td>Ekonomi Manajerial</td><td class="center">3</td><td class="center">0</td><td class="center">3</td></tr>
+                    <tr><td>Manajemen Pemasaran Jasa</td><td class="center">3</td><td class="center">0</td><td class="center">3</td></tr>
+                    <tr><td>Studi Kelayakan Bisnis</td><td class="center">3</td><td class="center">0</td><td class="center">3</td></tr>
+                    <tr class="total-row"><td>TOTAL SKS</td><td class="center">21</td><td class="center">0</td><td class="center">21</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="semester-box konsentrasi-wrapper">
+              <h3>Semester 6 (Peminatan Konsentrasi)</h3>
+              <p class="peminatan-info">Mahasiswa diwajibkan memilih salah satu dari 3 kelompok konsentrasi peminatan keahlian berikut:</p>
+              
+              <div class="konsentrasi-tabs">
+                <div class="tab-item">
+                  <h4><i class="fa-solid fa-bullhorn"></i> 1. Pemasaran</h4>
+                  <table>
+                    <tbody>
+                      <tr><td>Manajemen Pemasaran Internasional</td><td class="center">3</td></tr>
+                      <tr><td>Komunikasi Pemasaran</td><td class="center">3</td></tr>
+                      <tr><td>Riset Pemasaran</td><td class="center">3</td></tr>
+                      <tr><td>Strategi Pemasaran</td><td class="center">3</td></tr>
+                      <tr><td>Perilaku Konsumen</td><td class="center">3</td></tr>
+                      <tr><td>Metodologi Penelitian</td><td class="center">3</td></tr>
+                      <tr><td>Seminar Manajemen Pemasaran</td><td class="center">3</td></tr>
+                      <tr class="total-row"><td>TOTAL SKS PEMASARAN</td><td class="center">21</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="tab-item">
+                  <h4><i class="fa-solid fa-coins"></i> 2. Keuangan</h4>
+                  <table>
+                    <tbody>
+                      <tr><td>Manajemen Keuangan Internasional</td><td class="center">3</td></tr>
+                      <tr><td>Strategi Manajemen Keuangan</td><td class="center">3</td></tr>
+                      <tr><td>Manajemen Keuangan Lanjutan</td><td class="center">3</td></tr>
+                      <tr><td>Manajemen Perbankan</td><td class="center">3</td></tr>
+                      <tr><td>Lembaga Keuangan & Pasar Modal</td><td class="center">3</td></tr>
+                      <tr><td>Metodologi Penelitian</td><td class="center">3</td></tr>
+                      <tr><td>Seminar Manajemen Keuangan</td><td class="center">3</td></tr>
+                      <tr class="total-row"><td>TOTAL SKS KEUANGAN</td><td class="center">21</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="tab-item">
+                  <h4><i class="fa-solid fa-users-gear"></i> 3. Sumber Daya Manusia (SDM)</h4>
+                  <table>
+                    <tbody>
+                      <tr><td>Manajemen SDM Internasional</td><td class="center">3</td></tr>
+                      <tr><td>Manajemen SDM Strategi</td><td class="center">3</td></tr>
+                      <tr><td>Manajemen Pelatihan</td><td class="center">3</td></tr>
+                      <tr><td>Perencanaan SDM</td><td class="center">3</td></tr>
+                      <tr><td>Riset SDM</td><td class="center">3</td></tr>
+                      <tr><td>Metodologi Penelitian</td><td class="center">3</td></tr>
+                      <tr><td>Seminar Manajemen SDM</td><td class="center">3</td></tr>
+                      <tr class="total-row"><td>TOTAL SKS SDM</td><td class="center">21</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="semester-box">
+              <h3>Semester 7</h3>
+              <div class="table-responsive">
+                <table>
+                  <thead>
+                    <tr><th>Mata Kuliah</th><th class="center">T</th><th class="center">P</th><th class="center">Jml</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Bisnis Internasional</td><td class="center">3</td><td class="center">0</td><td class="center">3</td></tr>
+                    <tr><td>Kapita Selekta Manajemen</td><td class="center">3</td><td class="center">0</td><td class="center">3</td></tr>
+                    <tr><td>Manajemen Strategik</td><td class="center">3</td><td class="center">0</td><td class="center">3</td></tr>
+                    <tr><td>Kuliah Kerja Nyata (KKN)</td><td class="center">0</td><td class="center">4</td><td class="center">4</td></tr>
+                    <tr><td>Magang Industri PKL</td><td class="center">0</td><td class="center">4</td><td class="center">4</td></tr>
+                    <tr class="total-row"><td>TOTAL SKS</td><td class="center">9</td><td class="center">8</td><td class="center">17</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="semester-box">
+              <h3>Semester 8</h3>
+              <div class="table-responsive">
+                <table>
+                  <thead>
+                    <tr><th>Mata Kuliah</th><th class="center">T</th><th class="center">P</th><th class="center">Jml</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Skripsi</td><td class="center">0</td><td class="center">6</td><td class="center">6</td></tr>
+                    <tr class="total-row"><td>TOTAL SKS</td><td class="center">0</td><td class="center">6</td><td class="center">6</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <footer>
+      <div class="container" id="kontak">
+        <div class="footer-box">
+          <div class="box">
+            <div class="footer-logo">
+              <img src="assets/images/putih iasi.png" alt="Logo IASI Putih" />
+            </div>
+            <h2>Sosial Media</h2>
+            <p>Berikut ini adalah beberapa sarana media sosial yang ada di Institut Asyifa Indonesia yang bertujuan untuk sarana komunikasi jarak jauh.</p>
+            <div class="social">
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="box">
+            <h2>Menu</h2>
+            <a href="index.html#beranda">Beranda</a>
+            <a href="index.html#tentang">Tentang Kami</a>
+            <a href="index.html#akademik">Akademik</a>
+            <a href="index.html#pmb">PMB</a>
+          </div>
+          <div class="box">
+            <h2>Kontak</h2>
+            <p class="contact-item"><i class="fa-solid fa-envelope"></i> <span>institutasyifaindonesia@gmail.com</span></p>
+            <div class="kampus-info">
+              <h3>Kampus 1</h3>
+              <p class="contact-item"><i class="fa-solid fa-phone"></i> <span>(0234) 7135 779</span></p>
+              <p class="contact-item"><i class="fa-solid fa-location-dot"></i> <span>Jl. Raya Krangkeng No. 07, Indramayu</span></p>
+            </div>
+            <div class="kampus-info">
+              <h3>Kampus 2</h3>
+              <p class="contact-item"><i class="fa-solid fa-phone"></i> <span>(021) 557 03 263</span></p>
+              <p class="contact-item"><i class="fa-solid fa-location-dot"></i> <span>Jl. KH. Hasyim Ashari No. 108, Tangerang</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; Copyright 2026 by <span>IASI</span></p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="dist/js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

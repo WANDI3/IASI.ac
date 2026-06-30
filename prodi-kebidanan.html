@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3 Kebidanan - Institut Asyifa Indonesia (IASI)</title>
+
+    <link rel="shortcut icon" href="assets/icon/iasi.png" type="image/png">
+
+    <link rel="stylesheet" href="dist/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  </head>
+  <body>
+    
+    <div class="navbar">
+      <div class="container">
+        <div class="navbar-box">
+          <div class="logo">
+            <a href="index.html">
+              <img src="assets/images/iasi.png" alt="Logo IASI" />
+            </a>
+          </div>
+          <button class="menu-toggle" id="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <ul class="menu" id="navbar-menu">
+            <li><a href="index.html#beranda">Beranda</a></li>
+            <li class="dropdown">
+              <a href="index.html#tentang" class="dropdown-toggle">Profil <i class="fa-solid fa-chevron-down"></i></a>
+              <ul class="submenu">
+                <li><a href="sejarah.html">Sejarah IASI</a></li>
+                <li><a href="visi-misi.html">Visi Misi</a></li>
+                <li><a href="pimpinan.html">Pimpinan</a></li>
+                <li><a href="dosen.html">Dosen</a></li>
+                <li><a href="akreditasi.html">Akreditasi</a></li>
+                <li><a href="fasilitas.html">Fasilitas</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="index.html#akademik" class="dropdown-toggle">Akademik <i class="fa-solid fa-chevron-down"></i></a>
+              <ul class="submenu">
+                <li><a href="index.html#akademik">Prodi</a></li>
+                <li><a href="kalender.html">Kalender Akademik</a></li>
+              </ul>
+            </li>
+            <li><a href="index.html#pmb">PMB</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="prodi-page kebidanan-theme">
+      <div class="container">
+        
+        <div class="prodi-header" data-aos="fade-up" data-aos-duration="1000">
+          <span class="badge-jenjang">Program Studi D3</span>
+          <h1>Kebidanan</h1>
+          <p>Membentuk ahli madya kebidanan yang unggul dalam pelayanan komunitas, kompeten, inovatif, serta siap kerja.</p>
+        </div>
+
+        <div class="prodi-section sambutan-kaprodi" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <h2>Sambutan Ketua Program Studi</h2>
+          <p class="intro-sambutan">
+            <em>Assalamualaikum wr. wb.</em><br/><br/>
+            Selamat datang di halaman resmi Program Studi D3 Kebidanan Institut Asyifa Indonesia. Sebagai prodi yang berfokus pada asuhan kebidanan komunitas bermutu, kami berdedikasi penuh untuk membimbing mahasiswa agar siap mengabdi di garis depan pelayanan kesehatan ibu dan anak. Didukung oleh fasilitas laboratorium praktikum yang lengkap dan dosen profesional, kami berkomitmen untuk melahirkan bidan-bidan yang memiliki kesiapan kerja tinggi, berintegritas mulia, serta tangguh dalam melayani masyarakat luas.<br/><br/>
+            <em>Wassalamualaikum wr. wb.</em>
+          </p>
+          
+          <div class="kaprodi-management-grid">
+            <div class="kaprodi-profile-card">
+              <div class="mini-kaprodi-img">
+                <img src="assets/images/kebid1.jpeg" alt="Kaprodi Kebidanan Kampus I" />
+              </div>
+              <h3>Ida Yohanan, Amd. Keb., S.E., MKM.</h3>
+              <p class="jabatan">Ketua Program Studi Kebidanan Kampus I (Indramayu)</p>
+            </div>
+            
+            <div class="kaprodi-profile-card">
+              <div class="mini-kaprodi-img">
+                <img src="assets/images/kebid2.jpeg" alt="Kaprodi Kebidanan Kampus II" />
+              </div>
+              <h3>Resty Lisnawati, S.SIT., M. Kes.</h3>
+              <p class="jabatan">Ketua Program Studi Kebidanan Kampus II (Tangerang)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="prodi-grid-vmt">
+          <div class="prodi-vmt-card" data-aos="fade-up" data-aos-duration="1000">
+            <h2><i class="fa-solid fa-eye"></i> Visi Prodi</h2>
+            <p class="visi-text">"Terwujudnya Program Studi Kebidanan yang unggul dalam pelayanan kebidanan komunitas dan mampu berdaya saing di Tingkat Jawa Barat Tahun 2030".</p>
+          </div>
+
+          <div class="prodi-vmt-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+            <h2><i class="fa-solid fa-bullseye"></i> Misi Prodi</h2>
+            <ol>
+              <li>Menyengarakan program pendidikan dalam bidang asuhan kebidanan komunitas yang bermutu, inovatif dan kreatif dengan meningkatkan proses belajar mengajar dan kompetensi SDM secara berkala guna menunjang kualitas lulusan sesuai dengan standar kompetensi yang dibutuhkan stakeholder.</li>
+              <li>Mengadakan kegiatan pengabdian masyarakat berupa pendidikan kesehatan secara terprogram dan berkesinambungan dalam ilmu kebidanan secara komprehensif.</li>
+              <li>Mengembangkan studi penelitian kebidanan dan menyebarluaskan hasilnya untuk menunjang ilmu kebidanan.</li>
+              <li>Mengembangkan kerjasama dengan insitusi pelayanan kebidanan, pendidikan dan pengabdian kepada masyarakat.</li>
+            </ol>
+          </div>
+
+          <div class="prodi-vmt-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <h2><i class="fa-solid fa-crosshairs"></i> Tujuan Prodi</h2>
+            <ol>
+              <li>Menyediakan program pelatihan, workshop, dan magang yang dapat meningkatkan kompetensi mahasiswa dan lulusan agar siap menghadapi dunia kerja.</li>
+              <li>Menggiatkan penelitian dan pengabdian masyarakat yang berbasis pada kebutuhan masyarakat dan dunia usaha, serta mendukung inovasi yang dapat memberikan solusi praktis terhadap tantangan yang ada di masyarakat.</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="prodi-section kurikulum" data-aos="fade-up" data-aos-duration="1000">
+          <h2><i class="fa-solid fa-book-open"></i> Struktur Kurikulum & Distribusi Mata Kuliah</h2>
+          <p class="kurikulum-intro">Berikut merupakan sebaran kurikulum studi program studi D3 Kebidanan Institut Asyifa Indonesia:</p>
+
+          <div class="kurikulum-grid">
+            
+            <div class="semester-box">
+              <h3>Semester 1</h3>
+              <div class="table-responsive">
+                <table>
+                  <thead>
+                    <tr><th>Mata Kuliah</th><th class="center">T</th><th class="center">P</th><th class="center">SKS</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Pendidikan Agama</td><td class="center">1</td><td class="center">1</td><td class="center">2</td></tr>
+                    <tr><td>Pendidikan Kewarganegaraan</td><td class="center">1</td><td class="center">1</td><td class="center">2</td></tr>
+                    <tr><td>Pancasila</td><td class="center">1</td><td class="center">1</td><td class="center">2</td></tr>
+                    <tr><td>Bahasa Indonesia</td><td class="center">1</td><td class="center">1</td><td class="center">2</td></tr>
+                    <tr><td>Biologi Dasar Manusia</td><td class="center">2</td><td class="center">1</td><td class="center">3</td></tr>
+                    <tr><td>Kebutuhan Dasar Manusia</td><td class="center">1</td><td class="center">1</td><td class="center">2</td></tr>
+                    <tr><td>Konsep Kebidanan</td><td class="center">2</td><td class="center">1</td><td class="center">3</td></tr>
+                    <tr><td>Bahasa Inggris</td><td class="center">1</td><td class="center">1</td><td class="center">2</td></tr>
+                    <tr><td>Ilmu Sosial Budaya Dasar</td><td class="center">1</td><td class="center">1</td><td class="center">2</td></tr>
+                    <tr class="total-row"><td>TOTAL SKS</td><td class="center">11</td><td class="center">9</td><td class="center">20</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="semester-box">
+              <h3>Semester 2</h3>
+              <div class="table-responsive">
+                <table>
+                  <thead>
+                    <tr><th>Mata Kuliah</th><th class="center">T</th><th class="center">P</th><th class="center">SKS</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Komunikasi dalam Praktik Kebidanan</td><td class="center">1</td><td class="center">1</td><td class="center">2</td></tr>
+                    <tr><td>Keterampilan Dasar Kebidanan</td><td class="center">1</td><td class="center">2</td><td class="center">3</td></tr>
+                    <tr><td>Etikolegal dalam Praktik Kebidanan</td><td class="center">1</td><td class="center">1</td><td class="center">2</td></tr>
+                    <tr><td>Asuhan Kebidanan Kehamilan</td><td class="center">3</td><td class="center">2</td><td class="center">5</td></tr>
+                    <tr><td>Anatomi Fisiologi</td><td class="center">1</td><td class="center">1</td><td class="center">2</td></tr>
+                    <tr><td>Farmakologi</td><td class="center">1</td><td class="center">1</td><td class="center">2</td></tr>
+                    <tr><td>Dokumentasi Kebidanan</td><td class="center">1</td><td class="center">1</td><td class="center">2</td></tr>
+                    <tr><td>Promosi Kesehatan</td><td class="center">1</td><td class="center">1</td><td class="center">2</td></tr>
+                    <tr><td>Praktik KDK</td><td class="center">-</td><td class="center">-</td><td class="center">4</td></tr>
+                    <tr class="total-row"><td>TOTAL SKS</td><td class="center">10</td><td class="center">10</td><td class="center">24</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="semester-box">
+              <h3>Semester 3</h3>
+              <div class="table-responsive">
+                <table>
+                  <thead>
+                    <tr><th>Mata Kuliah</th><th class="center">T</th><th class="center">P</th><th class="center">SKS</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Asuhan Kebidanan Persalinan dan BBL</td><td class="center">3</td><td class="center">2</td><td class="center">5</td></tr>
+                    <tr><td>Asuhan Kebidanan Nifas dan Menyusui</td><td class="center">2</td><td class="center">2</td><td class="center">4</td></tr>
+                    <tr><td>Askeb Bayi, Balita dan Anak Pra Sekolah</td><td class="center">3</td><td class="center">2</td><td class="center">5</td></tr>
+                    <tr><td>Kesehatan Reproduksi dan KB</td><td class="center">3</td><td class="center">2</td><td class="center">5</td></tr>
+                    <tr><td>Praktik Klinik Kebidanan I (PKK I)</td><td class="center">-</td><td class="center">-</td><td class="center">5</td></tr>
+                    <tr class="total-row"><td>TOTAL SKS</td><td class="center">11</td><td class="center">8</td><td class="center">24</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="semester-box">
+              <h3>Semester 4 [cite: 145]</h3>
+              <div class="table-responsive">
+                <table>
+                  <thead>
+                    <tr><th>Mata Kuliah</th><th class="center">T</th><th class="center">P</th><th class="center">SKS</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Askeb Kegawatdaruratan Maternal Neonatal</td><td class="center">2</td><td class="center">2</td><td class="center">4</td></tr>
+                    <tr><td>Kesehatan Masyarakat</td><td class="center">1</td><td class="center">1</td><td class="center">2</td></tr>
+                    <tr><td>Asuhan Kebidanan Komunitas</td><td class="center">2</td><td class="center">2</td><td class="center">4</td></tr>
+                    <tr><td>Gizi dalam Kesehatan Reproduksi</td><td class="center">1</td><td class="center">1</td><td class="center">2</td></tr>
+                    <tr><td>Praktik Klinik Kebidanan II (PKK II)</td><td class="center">-</td><td class="center">-</td><td class="center">10</td></tr>
+                    <tr class="total-row"><td>TOTAL SKS</td><td class="center">6</td><td class="center">6</td><td class="center">22</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="semester-box">
+              <h3>Semester 5 </h3>
+              <div class="table-responsive">
+                <table>
+                  <thead>
+                    <tr><th>Mata Kuliah</th><th class="center">T</th><th class="center">P</th><th class="center">SKS</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Asuhan Kebidanan Komplementer</td><td class="center">2</td><td class="center">2</td><td class="center">4</td></tr>
+                    <tr><td>Kewirausahaan</td><td class="center">2</td><td class="center">1</td><td class="center">3</td></tr>
+                    <tr><td>Dasar-Dasar Ilmu Manajemen</td><td class="center">1</td><td class="center">1</td><td class="center">2</td></tr>
+                    <tr><td>Mutu Layanan Kebidanan & Kebijakan Kesehatan</td><td class="center">1</td><td class="center">1</td><td class="center">2</td></tr>
+                    <tr><td>Metode Penelitian dan Statistik Dasar</td><td class="center">2</td><td class="center">1</td><td class="center">3</td></tr>
+                    <tr><td>Pendidikan Budaya Anti Korupsi</td><td class="center">1</td><td class="center">1</td><td class="center">2</td></tr>
+                    <tr><td>PKK Komunitas</td><td class="center">-</td><td class="center">-</td><td class="center">3</td></tr>
+                    <tr class="total-row"><td>TOTAL SKS</td><td class="center">9</td><td class="center">7</td><td class="center">19</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="semester-box">
+              <h3>Semester 6</h3>
+              <div class="table-responsive">
+                <table>
+                  <thead>
+                    <tr><th>Mata Kuliah</th><th class="center">T</th><th class="center">P</th><th class="center">SKS</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Praktik Kebidanan Komprehensif</td><td class="center">0</td><td class="center">8</td><td class="center">8</td></tr>
+                    <tr><td>Laporan Tugas Akhir / KTI</td><td class="center">0</td><td class="center">3</td><td class="center">3</td></tr>
+                    <tr class="total-row"><td>TOTAL SKS</td><td class="center">0</td><td class="center">11</td><td class="center">11</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <footer>
+      <div class="container" id="kontak">
+        <div class="footer-box">
+          <div class="box">
+            <div class="footer-logo">
+              <img src="assets/images/putih iasi.png" alt="Logo IASI Putih" />
+            </div>
+            <h2>Sosial Media</h2>
+            <p>Berikut ini adalah beberapa sarana media sosial yang ada di Institut Asyifa Indonesia yang bertujuan untuk sarana komunikasi jarak jauh.</p>
+            <div class="social">
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="box">
+            <h2>Menu</h2>
+            <a href="index.html#beranda">Beranda</a>
+            <a href="index.html#tentang">Tentang Kami</a>
+            <a href="index.html#akademik">Akademik</a>
+            <a href="index.html#pmb">PMB</a>
+          </div>
+          <div class="box">
+            <h2>Kontak</h2>
+            <p class="contact-item"><i class="fa-solid fa-envelope"></i> <span>magneto-email@gmail.com</span></p>
+            <div class="kampus-info">
+              <h3>Kampus 1</h3>
+              <p class="contact-item"><i class="fa-solid fa-phone"></i> <span>(0234) 7135 779</span></p>
+              <p class="contact-item"><i class="fa-solid fa-location-dot"></i> <span>Jl. Raya Krangkeng No. 07, Indramayu</span></p>
+            </div>
+            <div class="kampus-info">
+              <h3>Kampus 2</h3>
+              <p class="contact-item"><i class="fa-solid fa-phone"></i> <span>(021) 557 03 263</span></p>
+              <p class="contact-item"><i class="fa-solid fa-location-dot"></i> <span>Jl. KH. Hasyim Ashari No. 108, Tangerang</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; Copyright 2026 by <span>IASI</span></p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="dist/js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
