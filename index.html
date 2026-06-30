@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IASI - Institut Asyifa Indonesia</title>
+
+    <!-- Fav Icon -->
+    <link rel="shortcut icon" href="/assets/icon/iasi.png" type="image/x-icon" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/dist/css/style.css" />
+
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- AOS -->
+       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body id="beranda">
+    <!--navbar-->
+    <div class="navbar">
+      <div class="container">
+        <div class="navbar-box">
+          
+          <div class="logo">
+            <a href="index.html">
+              <img src="assets/images/iasi.png" alt="Logo IASI" />
+            </a>
+          </div>
+
+          <button class="menu-toggle" id="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+
+            <ul class="menu" id="navbar-menu">
+              <li><a href="#beranda">Beranda</a></li>
+              
+              <!-- Menu Profil dengan Submenu -->
+              <li class="dropdown">
+                <a href="#tentang" class="dropdown-toggle">Profil <i class="fa-solid fa-chevron-down"></i></a>
+                <ul class="submenu">
+                  <li><a href="sejarah.html">Sejarah IASI</a></li>
+                  <li><a href="#tentang">Visi Misi</a></li>
+                  <li><a href="pimpinan.html">Pimpinan</a></li>
+                  <li><a href="dosen.html">Dosen</a></li>
+                  <li><a href="akreditasi.html">Akreditasi</a></li>
+                  <li><a href="fasilitas.html">Fasilitas</a></li>
+                </ul>
+              </li>
+
+              
+              <!-- Menu Akademik dengan Submenu -->
+              <li class="dropdown">
+                <a href="#akademik" class="dropdown-toggle">Akademik <i class="fa-solid fa-chevron-down"></i></a>
+                <ul class="submenu">
+                  <li><a href="#akademik">Prodi</a></li>
+                  <li><a href="kalender.html">Kalender Akademik</a></li>
+                </ul>
+              </li>
+
+              <li><a href="#pmb">PMB</a></li>
+              <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    <!--Navbar-->
+
+    <!--Hero-->
+    <div class="hero">
+      <div class="container">
+        <div class="hero-box">
+          <h1 data-aos="fade-up" data-aos-duration="1000">
+            Selamat Datang di <br /> 
+            Institut Asyifa Indonesia (IASI)
+        </h1>
+        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          Kampus Perubahan Menuju Unggul, Islami, dan Berdaya Saing <b>SK Kemdiktisaintek RI No. 802/B/O/2025</b>
+        </p>
+        <div class="hero-buttons">
+          <a href="#" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">Daftar PMB 2026</a>
+          <a href="#tentang" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">Lihat Prodi</a>
+        </div>
+        </div> 
+      </div>
+    </div>
+    <!--Hero-->
+
+    <!--Tentang Kami-->
+
+    <div class="tentang" id="tentang">
+      <div class="container">
+        <div class="tentang-box">
+          <div class="box">
+            <img src="assets/images/rektor.webp" alt="Tentang Image" />
+          </div>
+          <div class="box">
+            <h1 data-aos="fade-up" data-aos-duration="1000">
+              Sambutan Rektor
+            </h1>
+            <p>
+              Assalamualaikum wr. wb. <br/> <br/> 
+              Selamat datang di website resmi Institut Asyifa Indonesia. Sebagai kampus transformasi dari STIQ As-Syifa dan STIKES As-Syifa yang telah berpengalaman lebih dari 10 tahun, IASI hadir dengan 4 program studi unggulan untuk menjawab tantangan Indonesia Emas 2045. Kami berkomitmen melahirkan lulusan yang profesional, berakhlak mulia, dan bermanfaat bagi umat.  
+              <br/><br/>Wassalamualaikum wr. wb.  
+              <br/><br/>
+            </p>
+            <h3>Dr. H. Mahmudin Dika, S.H., S.K.M., M.Kes.</h3>
+            <p>Rektor IASI</p>
+          </div>
+        </div>
+
+        <!--info-->
+        <div class="info" id="akademik">
+            <div class="box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+              <a href="prodi-kebidanan.html" class="box">
+                <h2>
+                <span class="warna-hijau">(D3)</span><br/>
+                Kebidanan
+                </h2>
+                <p>
+                  Unggul dalam asuhan komplementer & kebencanaan
+                </p>
+              </a>
+            </div>
+            <div class="box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+              <a href="prodi-hukum.html" class="box">
+                <h2>
+                  <span class="warna-merah" >(S1)</span><br/>
+                  Ilmu Hukum
+                </h2>
+                <p>
+                  Fokus hukum bisnis syariah & hukum kesehatan  
+                </p>
+              </a>
+            </div>
+            <div class="box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+              <a href="prodi-manajemen.html" class="box">
+                <h2>
+                  <span class="warna-biru">(S1)</span><br/>
+                  Manajemen
+                </h2>
+                <p>
+                  Konsentrasi digital business & UMKM Halal
+                </p>
+              </a>
+            </div>
+            <div class="box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+              <a href="prodi-bahasa.html" class="box">
+                <h2>
+                <span class="warna-kuning">(S1)</span><br/>
+                  Pendidikan Bahasa Indonesia
+                </h2>
+                <p>
+                  Penguatan literasi & kearifan lokal Indramayu
+                </p>
+              </a>
+            </div>
+        </div>
+        <!--info-->
+
+      </div>
+    </div>
+
+    <!--Tentang Kami-->
+
+    <div class="akademik" id="tentang">
+      <div class="container">
+        <div class="akademik-box">
+        
+          <a href="sejarah.html" class="box" data-aos="fade-up" data-aos-duration="1000">
+            <img src="assets/images/sejara.webp" alt="Akademik Image">
+            <div class="desc">
+              <h2>Sejarah IASI</h2>
+              <p>
+                berdiri berdasarkan SK Kemdiktisaintek RI Nomor 802/B/O/2025 tanggal 5 Agustus 2025. 
+              </p>
+            </div>
+          </a>
+
+          <a href="visi-misi.html" class="box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <img src="assets/images/visimisi.jpg" alt="Praktik Image">
+            <div class="desc">
+              <h2>Visi & Misi IASI</h2>
+              <p>
+                Menjadi Institut yang unggul, Islami, dan berdaya saing di tingkat nasional pada tahun 2045.
+              </p>
+            </div>
+          </a>
+
+          <a href="akreditasi.html" class="box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+            <img src="assets/images/akreditasi.jpg" alt="Kreativitas Image">
+            <div class="desc">
+              <h2>Akreditasi</h2>
+              <p>
+                Mutu penjaminan pendidikan Institut Asyifa Indonesia yang terdaftar resmi di BAN-PT & LAM-PTKes. 
+              </p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+    <!--Akademik-->
+
+    <!--PMB-->
+    <div class="pmb" id="pmb">
+      <div class="container">
+        <div class="pmb-box">
+          <div class="box">
+            <img src="assets/images/ssiswa.png" alt="PMB Image">
+          </div>
+          <div class="box">
+            <h2 data-aos="fade-up" data-aos-duration="1000">Penerimaan Mahasiswa Baru (PMB)</h2>
+            <p>
+              Tujuan PMB adalah untuk memastikan penerimaan Mahasiswa baru berjalan secara objektif, transparan, akuntabel, non diskriminatif, dan berkeadilan.
+            </p>
+            <a href="https://wa.me/6282249022199?text=Halo%20Admin%20PMB%20Institut%20Asyifa%20Indonesia%20(IASI),%20saya%20ingin%20bertanya%20mengenai%20tata%20cara%20pendaftaran%20mahasiswa%20baru%20tahun%20akademik%202026%2F2027.%20Mohon%20informasi%20untuk%20syarat%20dan%20alur%20pendaftarannya.%20Terima%20kasih.">Link PMB</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--PMB-->
+
+    <!--footer-->
+
+    <footer>
+      <div class="container" id="kontak">
+        <div class="footer-box">
+          <div class="box">
+
+            <div class="footer-logo">
+              <img src="assets/images/putih iasi.png" alt="Logo IASI Putih" />
+            </div>
+
+            <h2>Sosial Media</h2>
+            <p>
+              Berikut ini adalah beberapa sarana media social yang ada di Institut Asyifa Indonesia yang bertujuan untuk sarana komunikasi jarak jauh untuk menginformasikan atau menampilkan kegiatan - kegiatan yang ada di Sekolah Ngoding Mastery ini.
+            </p>
+            <div class="social">
+              <a href="#">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+              <a href="#">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fa-brands fa-tiktok"></i>
+              </a>
+              <a href="#">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+          <div class="box">
+            <h2>Menu</h2>
+            <a href="#beranda">Beranda</a>
+            <a href="#tentang">tentang Kami</a>
+            <a href="#akademik">Akademik</a>
+            <a href="#pmb">PMB</a>
+          </div>
+          <div class="box">
+            <h2>Kontak</h2>
+            <p class="contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <span>institutasyifaindonesia@gmail.com</span>
+            </p>
+            
+            <div class="kampus-info">
+              <h3>Kampus 1</h3>
+              <p class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <span>(0234) 7135 779 - 7135 774</span>
+              </p>
+              <p class="contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Jl. Raya Krangkeng No. 07 RT. 08 / RW. 05, Desa Srengseng, Kec. Krangkeng, Kab. Indramayu, Jawa Barat 45284</span>
+              </p>
+            </div>
+
+            <div class="kampus-info">
+              <h3>Kampus 2</h3>
+              <p class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <span>(021) 557 03 263</span>
+              </p>
+              <p class="contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Jl. KH. Hasyim Ashari, Gg. Hj. Halimah No. 108 RT/RW. 02/01, Kel. Poris Plawad Utara, Kec. Cipondoh, Kota Tangerang - Banten 15141</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--copyright-->
+
+        <div class="copyright">
+          <p>&copy; Copyright 2026 by <span>IASI</span></p>
+        </div>
+
+        <!--copyright-->
+      </div>
+    </footer>
+
+    <!--footer-->
+
+    <!--scroll up-->
+    <a href="#beranda" class="scroll-up">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
+    <!--scroll up-->
+
+    <!-- JS -->
+     <script src="dist/js/script.js"></script>
+
+     <!-- AOS -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
+  </body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fasilitas - Institut Asyifa Indonesia (IASI)</title>
+
+    <!-- Fav Icon -->
+    <link rel="shortcut icon" href="assets/icon/iasi.png" type="image/png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/dist/css/style.css" />
+
+    <!-- Font Poppins & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    
+    <!-- NAVBAR (Sticky) -->
+    <div class="navbar">
+      <div class="container">
+        <div class="navbar-box">
+          <div class="logo">
+            <a href="index.html">
+              <img src="assets/images/iasi.png" alt="Logo IASI" />
+            </a>
+          </div>
+          <button class="menu-toggle" id="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <ul class="menu" id="navbar-menu">
+            <li><a href="index.html#beranda">Beranda</a></li>
+            <li class="dropdown">
+              <a href="index.html#tentang" class="dropdown-toggle">Profil <i class="fa-solid fa-chevron-down"></i></a>
+              <ul class="submenu">
+                <li><a href="sejarah.html">Sejarah IASI</a></li>
+                <li><a href="visi-misi.html">Visi Misi</a></li>
+                <li><a href="pimpinan.html">Pimpinan</a></li>
+                <li><a href="dosen.html">Dosen</a></li>
+                <li><a href="akreditasi.html">Akreditasi</a></li>
+                <li><a href="fasilitas.html">Fasilitas</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="index.html#akademik" class="dropdown-toggle">Akademik <i class="fa-solid fa-chevron-down"></i></a>
+              <ul class="submenu">
+                <li><a href="index.html#akademik">Prodi</a></li>
+                <li><a href="kalender.html">Kalender Akademik</a></li>
+              </ul>
+            </li>
+            <li><a href="index.html#pmb">PMB</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- KONTEN UTAMA FASILITAS -->
+    <div class="fasilitas-page">
+      <div class="container">
+        
+        <h1 class="fasilitas-title" data-aos="fade-up" data-aos-duration="1000">Fasilitas Kampus</h1>
+        <p class="fasilitas-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+          Institut Asyifa Indonesia menyediakan sarana dan prasarana modern untuk mendukung kenyamanan akademik serta potensi kreativitas mahasiswa.
+        </p>
+
+        <!-- GRID KARTU FASILITAS -->
+        <div class="fasilitas-grid">
+          
+          <!-- Fasilitas 1: Ruang Kelas -->
+          <div class="fasilitas-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <div class="fasilitas-img">
+              <img src="assets/images/kelas.jpg" alt="Ruang Kelas Modern IASI" />
+            </div>
+            <div class="fasilitas-info">
+              <h2><i class="fa-solid fa-chalkboard-user"></i> Ruang Kuliah Representatif</h2>
+              <p>Ruang kelas yang nyaman, bersih, dan dilengkapi dengan pendingin ruangan (AC), proyektor multimedia LCD, serta papan tulis interaktif guna mendukung efektivitas proses belajar mengajar.</p>
+            </div>
+          </div>
+
+          <!-- Fasilitas 2: Laboratorium Kebidanan / Kesehatan -->
+          <div class="fasilitas-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+            <div class="fasilitas-img">
+              <img src="assets/images/fasilitas-lab.webp" alt="Laboratorium Kebidanan IASI" />
+            </div>
+            <div class="fasilitas-info">
+              <h2><i class="fa-solid fa-flask-vial"></i> Laboratorium Praktikum Terpadu</h2>
+              <p>Laboratorium khusus kebidanan dan kesehatan yang dilengkapi dengan alat peraga (*phantom*) dan instrumen medis berstandar industri untuk mengasah keterampilan klinis praktis mahasiswa secara intensif.</p>
+            </div>
+          </div>
+
+          <!-- Fasilitas 3: Perpustakaan -->
+          <div class="fasilitas-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+            <div class="fasilitas-img">
+              <img src="assets/images/fasilitas-perpus.webp" alt="Perpustakaan IASI" />
+            </div>
+            <div class="fasilitas-info">
+              <h2><i class="fa-solid fa-book"></i> Perpustakaan & Ruang Referensi</h2>
+              <p>Menyediakan koleksi buku teks lengkap, jurnal ilmiah nasional maupun internasional, serta fasilitas *e-library* (akses komputer) sebagai pusat riset literatur akademis mahasiswa.</p>
+            </div>
+          </div>
+
+          <!-- Fasilitas 4: Sarana Olahraga & Kreativitas -->
+          <div class="fasilitas-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+            <div class="fasilitas-img">
+              <img src="assets/images/gambar.jpg" alt="Sarana Olahraga IASI" />
+            </div>
+            <div class="fasilitas-info">
+              <h2><i class="fa-solid fa-dumbbell"></i> Fasilitas Olahraga & Kegiatan</h2>
+              <p>Area olahraga terbuka dan gedung serbaguna yang dapat difungsikan mahasiswa untuk menjaga kebugaran fisik, mengasah minat bakat non-akademik, serta menyelenggarakan agenda organisasi.</p>
+            </div>
+          </div>
+
+          <!-- Fasilitas 5: Area Parkir & Keamanan -->
+          <div class="fasilitas-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+            <div class="fasilitas-img">
+              <img src="assets/images/parkir.jpg" alt="Lahan Parkir Kampus" />
+            </div>
+            <div class="fasilitas-info">
+              <h2><i class="fa-solid fa-shield-halved"></i> Area Parkir Luas & Aman</h2>
+              <p>Lahan parkir kendaraan roda dua dan roda empat yang tertata rapi, luas, serta dikawal oleh sistem pengamanan terpadu bersama petugas keamanan (*security*) dan pantauan kamera CCTV 24 jam.</p>
+            </div>
+          </div>
+
+          <!-- Fasilitas 6: Tempat Ibadah / Masjid -->
+          <div class="fasilitas-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
+            <div class="fasilitas-img">
+              <img src="assets/images/fasilitas-masjid.webp" alt="Masjid Kampus IASI" />
+            </div>
+            <div class="fasilitas-info">
+              <h2><i class="fa-solid fa-mosque"></i> Masjid / Mushola Kampus</h2>
+              <p>Sarana ibadah yang bersih, tenang, dan representatif di lingkungan kampus untuk memfasilitasi civitas akademika dalam menjalankan ibadah serta memelihara nilai-nilai spiritual keagamaan.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container" id="kontak">
+        <div class="footer-box">
+          <div class="box">
+            <div class="footer-logo">
+              <img src="assets/images/putih iasi.png" alt="Logo IASI Putih" />
+            </div>
+            <h2>Sosial Media</h2>
+            <p>Berikut ini adalah beberapa sarana media sosial yang ada di Institut Asyifa Indonesia yang bertujuan untuk sarana komunikasi jarak jauh.</p>
+            <div class="social">
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="box">
+            <h2>Menu</h2>
+            <a href="index.html#beranda">Beranda</a>
+            <a href="index.html#tentang">Tentang Kami</a>
+            <a href="index.html#akademik">Akademik</a>
+            <a href="index.html#pmb">PMB</a>
+          </div>
+          <div class="box">
+            <h2>Kontak</h2>
+            <p class="contact-item"><i class="fa-solid fa-envelope"></i> <span>institutasyifaindonesia@gmail.com</span></p>
+            <div class="kampus-info">
+              <h3>Kampus 1</h3>
+              <p class="contact-item"><i class="fa-solid fa-phone"></i> <span>(0234) 7135 779</span></p>
+              <p class="contact-item"><i class="fa-solid fa-location-dot"></i> <span>Jl. Raya Krangkeng No. 07, Indramayu</span></p>
+            </div>
+            <div class="kampus-info">
+              <h3>Kampus 2</h3>
+              <p class="contact-item"><i class="fa-solid fa-phone"></i> <span>(021) 557 03 263</span></p>
+              <p class="contact-item"><i class="fa-solid fa-location-dot"></i> <span>Jl. KH. Hasyim Ashari No. 108, Tangerang</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; Copyright 2026 by <span>IASI</span></p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="dist/js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

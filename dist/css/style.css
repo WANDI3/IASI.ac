@@ -1,0 +1,2001 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", serif;
+}
+
+.container{
+  width: 80%;
+  margin-inline: auto;
+}
+
+@media(max-width:992px){
+  .container{
+    width: 90%;
+  }
+}
+
+
+/* Navbar */
+.navbar{
+  /* padding: 30px 0;
+  position: relative;
+  background-color: #fff;  *//* Menjaga background tetap putih stabil */
+  padding: 15px 0;          /* Memperkecil padding vertikal agar navbar tidak terlalu tebal */
+  position: fixed;          /* KUNCI: Membuat navbar tetap berada di atas saat di-scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff; /* Memastikan latar belakang putih padat agar teks di bawahnya tidak tembus */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); /* Memberikan bayangan tipis di bawah navbar */
+  z-index: 1000;
+}
+
+.navbar-box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-box .logo img {
+  height: 45px;             /* Mengatur tinggi logo agar proporsional dan rapi */
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.navbar-box .logo img:hover {
+  transform: scale(1.05);   /* Efek membesar sedikit saat logo disorot kursor */
+}
+
+.navbar-box .menu{
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.navbar-box .menu li {
+  list-style-type: none;
+  position: relative; /* Menjadi patokan posisi kotak submenu */
+}
+
+.navbar-box .menu li a{
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Mengatur ikon panah bawah agar lebih kecil */
+.navbar-box .menu li a i {
+  font-size: 12px;
+  margin-left: 3px;
+}
+
+/* Gaya Dasar untuk Kotak Submenu (Desktop) */
+.navbar-box .menu .submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  min-width: 200px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  padding: 10px 0;
+  display: none; /* Sembunyikan secara default */
+  flex-direction: column;
+  gap: 0;
+  z-index: 1010;
+}
+
+.navbar-box .menu .submenu li a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 14px;
+  text-align: left;
+  font-weight: 400;
+}
+
+.navbar-box .menu .submenu li a:hover {
+  background-color: #fcfcfc;
+  color: orangered;
+}
+
+/* Memunculkan Submenu Saat Menu Utama Didekati Kursor (Hover) */
+.navbar-box .menu li.dropdown:hover .submenu {
+  display: flex;
+}
+
+.navbar-box .menu li a:hover {
+  color: orangered;
+}
+
+/* Sembunyikan tombol hamburger di layar desktop/laptop */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: black;
+}
+
+.hero {
+  padding-top: 90px; /* Menambahkan ruang kosong setinggi navbar agar konten Hero tidak tertutup */
+}
+
+@media (max-width: 768px){
+
+  /* Memunculkan tombol hamburger sejajar dengan logo */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Mengubah menu menjadi list vertikal tersembunyi */
+  .navbar-box .menu {
+    display: none; /* Sembunyikan secara default */
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 100%; /* Muncul tepat di bawah area navbar */
+    left: 0;
+    padding: 20px 0;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
+    gap: 15px;
+    z-index: 999;
+  }
+
+  /* Class pemicu dari JavaScript untuk memunculkan menu */
+  .navbar-box .menu.active {
+    display: flex; 
+  }
+
+  /* Membuat submenu tampil rapi mengalir ke bawah di HP */
+  .navbar-box .menu .submenu {
+    position: relative;
+    top: 0;
+    box-shadow: none;
+    background-color: #f9f9f9; /* Memberi warna background berbeda agar jelas itu anak menu */
+    width: 100%;
+    display: none; /* Tetap sembunyikan atau ubah ke `display: flex` jika ingin otomatis terbuka di HP */
+    padding: 5px 0;
+    border-radius: 0;
+  }
+
+  /* Otomatis tampilkan submenu di HP saat menu utama diklik/di-hover */
+  .navbar-box .menu li.dropdown:hover .submenu {
+    display: flex;
+  }
+
+  .navbar-box .menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-box .menu li a {
+    display: block;
+    padding: 10px 0;
+    width: 100%;
+  }
+
+}
+/* Navbar */
+
+
+/* Hero */
+/* .hero-box {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.541), rgba(0, 0, 0, 0.116)), url(/assets/images/iasi.webp);
+  width: 100%;
+  border-radius: 25px;
+  padding: 100px 20px;
+  color: white;
+} */
+
+.hero-box {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.541), rgba(0, 0, 0, 0.116)), url(/assets/images/iasi.webp);
+  width: 100%;
+  border-radius: 25px;
+  padding: 100px 20px;
+  color: white;
+  
+  /* --- KUNCI PERBAIKAN BACKGROUND GAMBAR --- */
+  background-repeat: no-repeat;  /* Mencegah gambar berulang/double di kanan-kiri */
+  background-size: cover;        /* Memaksa gambar menutup seluruh area box secara proporsional */
+  background-position: center;   /* Memastikan pusat gerbang kampus tetap di tengah */
+}
+
+.hero-box h1 {
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+.hero-box p {
+  margin-bottom: 30px;
+  line-height: 2;
+  width: 500px;
+  opacity: 75%;
+}
+
+/* 1. Tambahan Container untuk Tombol */
+.hero-buttons {
+  display: flex;
+  flex-direction: row; /* Di layar lebar, tombol berjajar ke samping */
+  gap: 15px;           /* Jarak antar tombol */
+  flex-wrap: wrap;     /* Supaya aman jika teks terlalu panjang */
+}
+
+/* 2. Mengubah selektor tombol agar lebih stabil */
+.hero-box .hero-buttons a { 
+  display: inline-block; /* Mengubah inline menjadi inline-block agar padding terbaca sempurna */
+  text-decoration: none;
+  color: white;
+  background-color: rgb(255, 94, 36);
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-size: 18px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.hero-box .hero-buttons a:hover {
+  background-color: white;
+  color: orangered;
+}
+
+/* Kustomisasi Opsional: Membedakan tombol kedua agar tidak monoton (Outline Style) */
+.hero-box .hero-buttons a:last-child {
+  background-color: transparent;
+  border: 2px solid white;
+}
+.hero-box .hero-buttons a:last-child:hover {
+  background-color: white;
+  color: orangered;
+}
+
+
+/* Media Queries */
+@media (max-width: 575px) {
+  .hero-box p {
+    width: 100%;
+  }
+  
+  /* 3. Di layar HP (di bawah 575px), tombol otomatis menyusun ke bawah */
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch; /* Membikin tombol melebar rapi menyesuaikan layar */
+    max-width: 280px;     /* Membatasi lebar tombol di HP agar tidak terlalu mulur */
+  }
+}
+
+@media (max-width: 475px) {
+  .hero-box h1 {
+    font-size: 30px;
+  }
+
+  .hero-box p {
+    font-size: 14px;
+  }
+}
+/* Hero */
+
+
+/* Tentang*/
+.tentang{
+  padding: 150px 0;
+}
+
+.tentang-box{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+/* .tentang-box img{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+} */
+
+.tentang-box img {
+  width: 100%;
+  height: 450px;          /* Tentukan tinggi maksimal yang pas untuk area teks sebelah */
+  object-fit: cover;      /* KUNCI PERBAIKAN: Memotong gambar secara proporsional agar tidak gepeng */
+  object-position: center;/* Memastikan wajah tetap berada di tengah */
+  border-radius: 20px;
+}
+
+.tentang-box h1{
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.tentang-box p{
+  line-height: 2;
+  text-align: justify;
+}
+
+.tentang .info{
+  /* display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding-top: 50px;
+  text-align: center; */
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Membagi rata menjadi 2 kolom ke samping */
+  gap: 50px 40px;                        /* Jarak antar baris (50px) dan antar kolom (40px) */
+  padding-top: 100px;                    /* Memberi jarak yang cukup dari teks sambutan rektor */
+  text-align: center;
+}
+
+/* Mengatur .box sebagai link block agar seluruh area bisa diklik */
+.tentang .info .box {
+  display: block;
+  text-decoration: none; /* Menghilangkan garis bawah tautan */
+  padding: 15px;
+  border-radius: 15px;
+  transition: transform 0.3s ease; /* Efek transisi halus saat di-hover */
+}
+
+/* Efek interaktif: sedikit membesar saat diarahkan kursor */
+.tentang .info .box:hover {
+  transform: scale(1.05); 
+}
+
+.tentang .info h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.3;
+  color: #333333;
+}
+
+.tentang .info h2 span{
+  font-size: 48px;
+  font-weight: bold;
+}
+
+/* Pengaturan warna kustom sesuai permintaan */
+.tentang .info h2 span.warna-hijau {
+  color: #2ec4b6; /* Hijau (bisa disesuaikan tingkat kecerahannya) */
+}
+
+.tentang .info h2 span.warna-merah {
+  color: #e63946; /* Merah */
+}
+
+.tentang .info h2 span.warna-biru {
+  color: #0077b6; /* Biru */
+}
+
+.tentang .info h2 span.warna-kuning {
+  color: #ffb703; /* Kuning (menggunakan warna mustard/gold agar tetap terbaca jelas di latar putih) */
+}
+
+.tentang .info p {
+  font-size: 16px;
+  color: #444444;
+  line-height: 1.6;
+  max-width: 400px;      /* Membatasi lebar teks agar rapi saat turun ke bawah */
+  margin: 0 auto;        /* Memastikan posisi teks tetap di tengah */
+}
+
+@media (max-width: 768px){
+  .tentang-box{
+    grid-template-columns: 1fr;
+  }
+
+  .tentang .info {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+/* Tentang*/
+
+
+/*Akadeik*/
+.akademik{
+  padding-bottom: 100px;
+}
+
+.akademik-box{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.akademik-box .box{
+  display: block;          /* Memastikan card mengambil ruang secara penuh */
+  text-decoration: none;   /* Menghilangkan garis bawah link bawaan */
+  color: #333333;          /* Menentukan warna default teks deskripsi */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); /* Diperhalus sedikit shadow-nya */
+  border-radius: 20px;     /* Disamakan rapi dengan border radius gambar */
+  background-color: #fff;  /* Memastikan background tetap putih */
+  overflow: hidden;        /* Memotong sudut gambar agar mengikuti radius box */
+  transition: all 0.3s ease; /* Animasi halus saat di-hover */
+}
+
+.akademik-box .box{
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.377);
+  border-radius: 10px;
+
+}
+
+/* Efek interaktif saat card didekati kursor (Hover) */
+.akademik-box .box:hover {
+  transform: translateY(-5px); /* Card sedikit terangkat ke atas */
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.25); /* Bayangan menajam */
+}
+
+.akademik-box img{
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.akademik-box img {
+  width: 100%;
+  height: 200px;           /* KUNCI 1: Mengunci tinggi semua gambar agar sama rata (misal: 200px) */
+  object-fit: cover;       /* KUNCI 2: Memotong gambar secara cerdas agar pas & tidak ketarik/gepeng */
+  object-position: center; /* Memastikan bagian tengah foto gedung tetap fokus terlihat */
+  display: block;
+}
+
+.akademik-box img{
+  width: 100%;
+  display: block;
+}
+
+.akademik-box .desc{
+  padding: 20px;
+}
+
+/* Memastikan warna judul h2 tetap hitam tegas */
+.akademik-box .desc h2 {
+  color: #000000;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.akademik-box .desc p{
+  line-height: 2;
+  font-size: 15px;
+}
+
+@media (max-width: 575px) {
+  .akademik-box{
+    gap: 40px;
+  }
+}
+/*Akadeik*/
+
+/*PMB*/
+.pmb{
+  padding-block: 50px;
+}
+
+.pmb-box{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  align-items: center;
+  text-align: center;
+}
+
+.pmb-box img{
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.486);
+}
+
+.pmb-box h2{
+  margin-bottom: 10px;
+}
+
+.pmb-box p{
+  line-height: 2;
+  margin-bottom: 20px;
+
+}
+
+.pmb-box a{
+  text-decoration: none;
+  color: white;
+  background-color: orangered;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+.pmb-box a:hover{
+  background-color: rgb(175, 48, 2);
+}
+
+@media(max-width: 768px){
+  .pmb-box {
+    grid-template-columns: 1fr;
+  }
+}
+/*PMB*/
+
+/* Footer*/
+
+/* Mengatur ukuran dan jarak logo putih di footer */
+.footer-box .footer-logo img {
+  height: 120px;          
+  width: auto;           
+  display: block;
+  margin: 0 auto 25px auto; /* KUNCI: Menengahkan gambar (auto di kanan-kiri) dan memberi jarak 25px di bawah */
+  opacity: 0.95;         
+  transition: transform 0.3s ease;
+}
+
+/* Efek interaktif saat logo disorot */
+.footer-box .footer-logo img:hover {
+  transform: scale(1.05);
+}
+
+footer{
+  margin-top: 100px;
+  padding: 50px 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+.footer-box{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  row-gap: 50px;
+}
+
+.footer-box h2{
+  margin-bottom: 20px;
+}
+
+.footer-box p{
+  line-height: 2;
+  font-size: 14px;
+}
+
+.footer-box .box:nth-child(1){
+  width: 400px;
+}
+
+
+.footer-box .social{
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-box .social a{
+  font-size: 28px;
+  text-decoration: none;
+  color: white;
+}
+
+.footer-box .social a:hover{
+  color: orangered;
+}
+
+.footer-box .box:nth-child(2){
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-box .box:nth-child(2) h2 {
+  margin-bottom: 0;
+}
+
+.footer-box .box:nth-child(2) a {
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+}
+
+.footer-box .box:nth-child(2) a:hover{
+  color: orangered;
+}
+
+.footer-box .box:nth-child(3){
+  width: 300px;
+}
+
+.footer-box .box:nth-child(3) p {
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.copyright{
+  margin-top: 50px;
+  text-align: center;
+}
+
+.copyright p{
+  font-size: 14px;
+}
+
+.copyright p span{
+  font-weight: bold;
+}
+/* Footer*/
+
+/*Scroll up*/
+.scroll-up{
+  width: 50px;
+  height: 50px;
+  background-color: orangered;
+  color: white;
+  border-radius: 100%;
+  display: grid;
+  place-items: center;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  opacity: 0;
+  transition: all 0.5s ease;
+} 
+
+.scroll-up.scroll-active{
+  opacity: 1;
+}
+/*Scroll up*/
+
+
+/* --- Halaman Khusus Sejarah --- */
+.sejarah-page {
+  padding-top: 140px;      /* Menjaga jarak agar konten tidak terpotong navbar fixed */
+  padding-bottom: 80px;
+  background-color: #fafafa;
+}
+
+/* Mengatur Judul Halaman Sejarah */
+.sejarah-title {
+  font-size: 36px;
+  color: #000020e0;          /* Biru Dongker IASI */
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+/* Mengatur Bingkai Foto Gedung */
+.sejarah-image-box {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.sejarah-image-box img {
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Mengatur Paragraf Teks Narasi */
+.sejarah-content {
+  max-width: 850px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.02);
+}
+
+.sejarah-content p {
+  font-size: 16px;
+  line-height: 2;
+  color: #333333;
+  text-align: justify;     /* Membuat teks rapi rata kanan-kiri */
+  margin-bottom: 25px;
+}
+
+.sejarah-content p:last-child {
+  margin-bottom: 0;        /* Menghilangkan margin pada paragraf terakhir */
+}
+
+/* Media Query Responsif di HP */
+@media (max-width: 768px) {
+  .sejarah-page {
+    padding-top: 110px;
+  }
+  
+  .sejarah-title {
+    font-size: 26px;
+    padding-inline: 10px;
+  }
+  
+  .sejarah-content {
+    padding: 25px 20px;
+  }
+  
+  .sejarah-content p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+}
+
+
+/* ==========================================================================
+   HALAMAN KHUSUS VISI, MISI, & TUJUAN IASI
+   ========================================================================== */
+
+/* Area Utama Pembungkus Halaman */
+.visi-misi-page {
+  padding-top: 140px;      /* Menjaga ruang agar konten tidak tertutup oleh navbar fixed */
+  padding-bottom: 80px;
+  background-color: #fafafa; /* Background abu-abu sangat terang agar kotak putih terlihat kontras */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Mengatur Desain Judul Utama Halaman */
+.visi-misi-page-title {
+  font-size: 36px;
+  color: #000080;          /* Warna Biru Dongker Resmi IASI */
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Container Kolom Vertikal Pembungkus Kotak-Kotak */
+.visi-misi-page-content {
+  max-width: 850px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;  /* Menyusun kotak Visi, Misi, dan Tujuan berurutan ke bawah */
+  gap: 40px;               /* Jarak antar kotak kartu */
+}
+
+/* Desain Dasar Setiap Kotak Kartu (Visi, Misi, & Tujuan) */
+.visi-misi-page-content .page-visi-box,
+.visi-misi-page-content .page-misi-box,
+.visi-misi-page-content .page-tujuan-box {
+  background-color: #ffffff;
+  padding: 45px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.03); /* Efek bayangan tipis yang elegan */
+  border: 1px solid #eeeeee;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek Interaktif Saat Kotak Kartu Tersorot Kursor */
+.visi-misi-page-content .page-visi-box:hover,
+.visi-misi-page-content .page-misi-box:hover,
+.visi-misi-page-content .page-tujuan-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* Mengatur Gaya Judul di Dalam Setiap Kotak */
+.visi-misi-page-content h2 {
+  font-size: 28px;
+  color: #000080;          /* Biru Dongker */
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 12px;               /* Jarak antara ikon font-awesome dengan teks judul */
+}
+
+/* Mengatur Warna Ikon Judul */
+.visi-misi-page-content h2 i {
+  color: orangered;        /* Aksen warna oranye khas tema website */
+  font-size: 26px;
+}
+
+/* Khusus Isi Teks Visi (Rata Tengah dengan Tanda Kutip) */
+.visi-misi-page-content .page-visi-box p {
+  font-size: 18px;
+  line-height: 2;
+  color: #333333;
+  text-align: center;      /* Visi diketengahkan agar terlihat sebagai statement utama */
+  font-weight: 500;
+  font-style: italic;      /* Format miring sesuai dokumen resmi */
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+/* Mengatur Jarak Daftar List Angka (Misi & Tujuan) */
+.visi-misi-page-content .page-misi-box ol,
+.visi-misi-page-content .page-tujuan-box ol {
+  padding-left: 25px;      /* Memberikan ruang agar angka list tidak keluar kotak */
+  margin: 0;
+}
+
+/* Mengatur Gaya Butir-Butir List Teperinci (Misi & Tujuan) */
+.visi-misi-page-content .page-misi-box ol li,
+.visi-misi-page-content .page-tujuan-box ol li {
+  font-size: 16px;
+  line-height: 2;          /* Spasi baris yang longgar agar teks panjang nyaman dibaca */
+  color: #444444;
+  margin-bottom: 18px;     /* Jarak antar poin list */
+  text-align: justify;     /* Teks rata kanan-kiri yang rapi */
+}
+
+/* Menghilangkan margin bawah pada poin list terakhir */
+.visi-misi-page-content .page-misi-box ol li:last-child,
+.visi-misi-page-content .page-tujuan-box ol li:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ==========================================================================
+   DESAIN RESPONSIF (MEDIA QUERIES UNTUK HP & TABLET)
+   ========================================================================== */
+
+/* Pengaturan untuk Layar HP / Ukuran Layar Kecil (Maksimal Lebar 768px) */
+@media (max-width: 768px) {
+  .visi-misi-page {
+    padding-top: 110px;    /* Jarak atas disesuaikan dengan tinggi navbar mobile */
+    padding-bottom: 50px;
+  }
+  
+  .visi-misi-page-title {
+    font-size: 24px;       /* Memperkecil ukuran judul halaman di HP */
+    padding-inline: 15px;
+    margin-bottom: 35px;
+  }
+  
+  .visi-misi-page-content {
+    gap: 25px;             /* Mempersempit jarak antar kotak di HP */
+    padding-inline: 15px;  /* Memberikan margin luar kanan-kiri pada layar HP */
+  }
+  
+  /* Memperkecil ruang padding dalam kotak agar menghemat tempat di layar HP */
+  .visi-misi-page-content .page-visi-box,
+  .visi-misi-page-content .page-misi-box,
+  .visi-misi-page-content .page-tujuan-box {
+    padding: 30px 20px;
+    border-radius: 15px;   /* Sudut lengkungan kotak sedikit diperkecil */
+  }
+  
+  .visi-misi-page-content h2 {
+    font-size: 22px;       /* Ukuran judul kotak lebih kecil di HP */
+    margin-bottom: 15px;
+  }
+  
+  .visi-misi-page-content .page-visi-box p {
+    font-size: 15px;       /* Ukuran teks visi disesuaikan */
+    line-height: 1.8;
+  }
+  
+  .visi-misi-page-content .page-misi-box ol li,
+  .visi-misi-page-content .page-tujuan-box ol li {
+    font-size: 14.5px;     /* Ukuran isi list diperkecil agar pas dibaca di HP */
+    line-height: 1.8;
+    margin-bottom: 12px;
+  }
+}
+
+
+/* ==========================================================================
+   HALAMAN KHUSUS AKREDITASI KAMPUS & PRODI
+   ========================================================================== */
+.akreditasi-page {
+  padding-top: 140px;
+  padding-bottom: 80px;
+  background-color: #fafafa;
+}
+
+.akreditasi-title {
+  font-size: 36px;
+  color: #000080; /* Biru Dongker IASI */
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.akreditasi-subtitle {
+  text-align: center;
+  color: #666666;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+.akreditasi-section {
+  background-color: #ffffff;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.03);
+  border: 1px solid #eeeeee;
+  margin-bottom: 40px;
+}
+
+.akreditasi-section h2 {
+  font-size: 22px;
+  color: #000080;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-left: 4px solid orangered;
+  padding-left: 12px;
+}
+
+/* Penataan Desain Tabel Modern */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto; /* Antisipasi agar di HP tidak rusak dan bisa digeser */
+}
+
+.table-akreditasi {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table-akreditasi th {
+  background-color: #000080;
+  color: #ffffff;
+  padding: 15px 20px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.table-akreditasi td {
+  padding: 15px 20px;
+  border-bottom: 1px solid #eeeeee;
+  font-size: 15px;
+  color: #333333;
+}
+
+.table-akreditasi tr:last-child td {
+  border-bottom: none;
+}
+
+.table-akreditasi tr:nth-child(even) {
+  background-color: #fcfcfc;
+}
+
+/* Label/Badge Nilai Akreditasi */
+.badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.badge.baik-sekali {
+  background-color: #e6f7ed;
+  color: #2e7d32; /* Hijau Tua */
+}
+
+.badge.baik {
+  background-color: #e3f2fd;
+  color: #1565c0; /* Biru */
+}
+
+/* Responsif Mobile */
+@media (max-width: 768px) {
+  .akreditasi-page {
+    padding-top: 110px;
+  }
+  .akreditasi-title {
+    font-size: 26px;
+  }
+  .akreditasi-section {
+    padding: 20px 15px;
+  }
+  .table-akreditasi th, 
+  .table-akreditasi td {
+    padding: 12px 10px;
+    font-size: 13.5px;
+  }
+}
+
+
+/* ==========================================================================
+   HALAMAN KHUSUS PROGRAM STUDI (PRODI) TEMPLATE
+   ========================================================================== */
+.prodi-page {
+  padding-top: 140px;
+  padding-bottom: 80px;
+  background-color: #fafafa;
+}
+
+/* Jumbotron Header Prodi */
+.prodi-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+}
+
+.badge-jenjang {
+  display: inline-block;
+  padding: 6px 16px;
+  background-color: rgba(0, 0, 128, 0.1);
+  color: #000080;
+  font-weight: 600;
+  border-radius: 50px;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.prodi-header h1 {
+  font-size: 42px;
+  color: #333333;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.prodi-header p {
+  font-size: 16px;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* Kotak Section Umum */
+.prodi-section {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.02);
+  border: 1px solid #eeeeee;
+  margin-bottom: 40px;
+}
+
+.prodi-section h2 {
+  font-size: 24px;
+  color: #000080;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Pengaturan Layout Sambutan Kaprodi */
+.kaprodi-flex {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.kaprodi-img {
+  flex-shrink: 0;
+  width: 250px;
+  height: 320px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.kaprodi-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sambutan-text h2 {
+  margin-bottom: 15px !important;
+}
+
+.sambutan-text p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #444444;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.sambutan-text h3 {
+  font-size: 18px;
+  color: #333333;
+  margin-bottom: 2px;
+}
+
+.sambutan-text .jabatan {
+  font-size: 13.5px;
+  color: orangered;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+/* Grid Layout Visi Misi Tujuan */
+.prodi-grid-vmt {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.prodi-vmt-card {
+  background-color: #ffffff;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.02);
+  border: 1px solid #eeeeee;
+}
+
+.prodi-vmt-card h2 {
+  font-size: 22px;
+  color: #000080;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.prodi-vmt-card .visi-text {
+  font-size: 17px;
+  line-height: 1.8;
+  text-align: center;
+  font-style: italic;
+  color: #333333;
+  font-weight: 500;
+  max-width: 700px;
+  margin: 10px auto;
+}
+
+.prodi-vmt-card ol {
+  padding-left: 20px;
+}
+
+.prodi-vmt-card ol li {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #444444;
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+.prodi-vmt-card ol li:last-child {
+  margin-bottom: 0;
+}
+
+/* Desain Tabel Kurikulum Semeteran */
+.kurikulum-intro {
+  font-size: 15px;
+  color: #555555;
+  margin-bottom: 30px;
+}
+
+.kurikulum-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 Kolom menyamping di Desktop */
+  gap: 30px;
+}
+
+.semester-box {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid #eef0f2;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.01);
+}
+
+.semester-box h3 {
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #000080; /* Default Header Biru */
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.semester-box table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.semester-box th {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #777777;
+  padding: 8px 10px;
+  border-bottom: 2px solid #eef0f2;
+}
+
+.semester-box td {
+  font-size: 14px;
+  padding: 10px;
+  color: #444444;
+  border-bottom: 1px solid #f4f6f8;
+}
+
+.semester-box tr:last-child td {
+  border-bottom: none;
+}
+
+.semester-box .center {
+  text-align: center;
+  width: 40px;
+}
+
+.semester-box .total-row td {
+  font-weight: 700;
+  color: #000080;
+  background-color: #f8fafc;
+  border-top: 1px solid #eef0f2;
+}
+
+/* ==========================================================================
+   TEMA KHUSUS PRODI: TEMA HUKUM (AKSEN MERAH CRIMSON)
+   ========================================================================== */
+.hukum-theme .badge-jenjang {
+  background-color: rgba(166, 25, 46, 0.1);
+  color: #a6192e;
+}
+
+.hukum-theme .prodi-vmt-card h2 i,
+.hukum-theme .prodi-section h2 i,
+.hukum-theme .sambutan-text .jabatan {
+  color: #a6192e;
+}
+
+.hukum-theme .semester-box h3 {
+  background-color: #a6192e; /* Mengubah Header Tabel Semester Menjadi Merah */
+}
+
+.hukum-theme .semester-box .total-row td {
+  color: #a6192e;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES RESPONSIVE MOBILE
+   ========================================================================== */
+@media (max-width: 992px) {
+  .kurikulum-grid {
+    grid-template-columns: 1fr; /* 1 Kolom vertikal di Tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .prodi-page {
+    padding-top: 110px;
+  }
+  
+  .prodi-header h1 {
+    font-size: 30px;
+  }
+  
+  .kaprodi-flex {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
+  
+  .kaprodi-img {
+    width: 200px;
+    height: 260px;
+  }
+  
+  .sambutan-text p {
+    text-align: left;
+  }
+  
+  .prodi-section, .prodi-vmt-card {
+    padding: 25px 20px;
+  }
+  
+  .prodi-vmt-card .visi-text {
+    font-size: 15px;
+  }
+}
+
+
+/* ==========================================================================
+   TEMA KHUSUS PRODI: TEMA MANAJEMEN (AKSEN BIRU LAUT / ROYAL BLUE)
+   ========================================================================== */
+.manajemen-theme .badge-jenjang {
+  background-color: rgba(0, 80, 180, 0.1);
+  color: #0050b4;
+}
+
+.manajemen-theme .prodi-vmt-card h2 i,
+.manajemen-theme .prodi-section h2 i,
+.manajemen-theme .sambutan-text .jabatan {
+  color: #0050b4;
+}
+
+.manajemen-theme .semester-box h3 {
+  background-color: #0050b4; /* Mengubah Header Tabel Semester Menjadi Biru */
+}
+
+.manajemen-theme .semester-box .total-row td {
+  color: #0050b4;
+}
+
+/* Pengaturan Khusus Box Konsentrasi Semester 6 */
+.konsentrasi-wrapper {
+  grid-column: span 2; /* Menjadikan area pilihan konsentrasi melebar 2 kolom penuh di desktop */
+}
+
+.peminatan-info {
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.konsentrasi-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Membagi 3 kolom sama rata untuk masing-masing konsentrasi */
+  gap: 20px;
+}
+
+.tab-item {
+  background-color: #fafbfc;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px dashed #dddddd;
+}
+
+.tab-item h4 {
+  font-size: 15px;
+  color: #333333;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #0050b4;
+  padding-bottom: 5px;
+}
+
+.tab-item td {
+  font-size: 13px;
+  padding: 8px 5px;
+}
+
+/* Penyesuaian Responsif Konsentrasi di HP */
+@media (max-width: 992px) {
+  .konsentrasi-wrapper {
+    grid-column: span 1;
+  }
+  .konsentrasi-tabs {
+    grid-template-columns: 1fr; /* Runtuh menjadi 1 kolom vertikal ke bawah di tablet/HP */
+    gap: 25px;
+  }
+}
+
+/* ==========================================================================
+   TEMA KHUSUS PRODI: TEMA PENDIDIKAN BAHASA INDONESIA (AKSEN ORANGERED)
+   ========================================================================== */
+.bahasa-theme .badge-jenjang {
+  background-color: rgba(255, 69, 0, 0.1);
+  color: orangered;
+}
+
+.bahasa-theme .prodi-vmt-card h2 i,
+.bahasa-theme .prodi-section h2 i,
+.bahasa-theme .sambutan-text .jabatan {
+  color: orangered;
+}
+
+.bahasa-theme .semester-box h3 {
+  background-color: orangered; /* Mengubah Header Tabel Semester Menjadi Oranye */
+}
+
+.bahasa-theme .semester-box .total-row td {
+  color: orangered;
+}
+
+
+/* ==========================================================================
+   TEMA KHUSUS PRODI: TEMA D3 KEBIDANAN (AKSEN HIJAU TOSKA / TEAL)
+   ========================================================================== */
+.kebidanan-theme .badge-jenjang {
+  background-color: rgba(46, 196, 182, 0.1);
+  color: #2ec4b6;
+}
+
+.kebidanan-theme .prodi-vmt-card h2 i,
+.kebidanan-theme .prodi-section h2 i,
+.kebidanan-theme .kaprodi-profile-card .jabatan {
+  color: #2ec4b6;
+}
+
+.kebidanan-theme .semester-box h3 {
+  background-color: #2ec4b6; /* Mengubah Header Tabel Semester Menjadi Hijau Toska */
+}
+
+.kebidanan-theme .semester-box .total-row td {
+  color: #2ec4b6;
+}
+
+/* Modifikasi Layout Khusus Manajemen Dua Kaprodi */
+.intro-sambutan {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #444444;
+  text-align: justify;
+  margin-bottom: 35px;
+}
+
+.kaprodi-management-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  border-top: 1px dashed #eef0f2;
+  padding-top: 30px;
+}
+
+.kaprodi-profile-card {
+  text-align: center;
+  background-color: #fafbfc;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #f0f2f5;
+}
+
+.mini-kaprodi-img {
+  width: 140px;
+  height: 180px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 auto 15px auto;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.04);
+}
+
+.mini-kaprodi-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.kaprodi-profile-card h3 {
+  font-size: 16px;
+  color: #333333;
+  margin-bottom: 5px;
+}
+
+.kaprodi-profile-card .jabatan {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Penyesuaian Responsif Dua Kaprodi di HP */
+@media (max-width: 768px) {
+  .kaprodi-management-grid {
+    grid-template-columns: 1fr; /* Runtuh menjadi ke bawah satu per satu di HP */
+    gap: 20px;
+  }
+}
+
+/* ==========================================================================
+   HALAMAN KHUSUS FASILITAS KAMPUS
+   ========================================================================== */
+.fasilitas-page {
+  padding-top: 140px;
+  padding-bottom: 80px;
+  background-color: #fafafa;
+}
+
+.fasilitas-title {
+  font-size: 36px;
+  color: #000080; /* Biru Dongker IASI */
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.fasilitas-subtitle {
+  text-align: center;
+  color: #666666;
+  font-size: 16px;
+  max-width: 750px;
+  margin: 0 auto 50px auto;
+  line-height: 1.6;
+}
+
+/* Penataan Grid Sistem Kartu Fasilitas */
+.fasilitas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 Kolom sejajar di Desktop */
+  gap: 30px;
+}
+
+.fasilitas-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.02);
+  border: 1px solid #eef0f2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fasilitas-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* Menyeragamkan Ukuran Bingkai Foto Fasilitas */
+.fasilitas-img {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: #eaeaea;
+}
+
+.fasilitas-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Bagian Deskripsi Kartu */
+.fasilitas-info {
+  padding: 25px;
+}
+
+.fasilitas-info h2 {
+  font-size: 18px;
+  color: #000080;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.fasilitas-info h2 i {
+  color: orangered; /* Aksen ikon oranye tema IASI */
+  font-size: 16px;
+}
+
+.fasilitas-info p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #555555;
+  text-align: justify;
+}
+
+/* ==========================================================================
+   DESAIN RESPONSIF FASILITAS
+   ========================================================================== */
+@media (max-width: 992px) {
+  .fasilitas-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 Kolom pada Tablet */
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .fasilitas-page {
+    padding-top: 110px;
+  }
+  
+  .fasilitas-title {
+    font-size: 26px;
+  }
+  
+  .fasilitas-subtitle {
+    font-size: 14.5px;
+    margin-bottom: 35px;
+    padding-inline: 10px;
+  }
+  
+  .fasilitas-grid {
+    grid-template-columns: 1fr; /* 1 Kolom penuh ke bawah di HP */
+    gap: 25px;
+    padding-inline: 10px;
+  }
+  
+  .fasilitas-info {
+    padding: 20px;
+  }
+}
+
+/* ==========================================================================
+   HALAMAN KHUSUS STRUKTUR PIMPINAN KAMPUS
+   ========================================================================== */
+.pimpinan-page {
+  padding-top: 140px;
+  padding-bottom: 80px;
+  background-color: #fafafa;
+}
+
+.pimpinan-title {
+  font-size: 36px;
+  color: #000080; /* Biru Dongker IASI */
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.pimpinan-subtitle {
+  text-align: center;
+  color: #666666;
+  font-size: 16px;
+  max-width: 750px;
+  margin: 0 auto 50px auto;
+  line-height: 1.6;
+}
+
+/* Penataan Layout Baris Manajemen Struktural */
+.pimpinan-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+/* Level 1: Rektor (Satu Kartu Besar Berada di Tengah) */
+.rektor-row .main-leader {
+  width: 300px;
+}
+
+/* Level 2: Warek (Grid 2 Kolom Sejajar) */
+.warek-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 280px);
+  gap: 30px;
+}
+
+/* Sub-Judul Khusus Kelompok Dekan/Staff */
+.pimpinan-title-section {
+  text-align: center;
+  margin: 60px 0 30px 0;
+}
+
+.pimpinan-title-section h2 {
+  font-size: 24px;
+  color: #000080;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.pimpinan-title-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: orangered;
+}
+
+/* Level 3: Dekan & Biro (Grid 3 Kolom Sejajar) */
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 280px);
+  gap: 30px;
+}
+
+/* Gaya Desain Dasar Kartu Pimpinan */
+.pimpinan-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.02);
+  border: 1px solid #eef0f2;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pimpinan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* Ukuran Wadah Bingkai Foto Profil Resmi */
+.pimpinan-img {
+  width: 100%;
+  height: 350px; /* Tinggi potret pas untuk profil pimpinan resmi */
+  overflow: hidden;
+  background-color: #f0f2f5;
+}
+
+.pimpinan-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Area Detail Info Pimpinan */
+.pimpinan-info {
+  padding: 20px 15px;
+}
+
+.pimpinan-info h3 {
+  font-size: 16px;
+  color: #333333;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.pimpinan-info .jabatan {
+  font-size: 13px;
+  color: #666666;
+  font-weight: 400;
+  margin-bottom: 15px;
+  height: 35px; /* Menjaga teks 2 baris agar tetap sejajar rata */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leader-line {
+  width: 35px;
+  height: 3px;
+  background-color: orangered; /* Aksen garis bawah oranye khas IASI */
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+/* Membuat Grid Khusus Kaprodi Kampus (Menampilkan 5 Kaprodi) */
+.kaprodi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 280px); /* 3 Kolom di baris atas, sisanya otomatis membungkus rapi ke bawah */
+  gap: 30px;
+  justify-content: center;
+}
+
+.kaprodi-grid-atas {
+  display: grid;
+  grid-template-columns: repeat(3, 280px);
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 30px; /* Jarak menuju baris kebidanan di bawahnya */
+}
+
+/* Baris Bawah: Khusus 2 Kaprodi Kebidanan Mengunci Rata Tengah */
+.kaprodi-grid-bawah {
+  display: grid;
+  grid-template-columns: repeat(2, 280px);
+  gap: 30px;
+  justify-content: center; /* KUNCI: Menempatkan 2 kartu tepat di tengah halaman */
+}
+
+/* ==========================================================================
+   DESAIN RESPONSIF STRUKTUR PIMPINAN (MOBILE)
+   ========================================================================== */
+@media (max-width: 992px) {
+  .warek-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding-inline: 20px;
+  }
+  .staff-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding-inline: 15px;
+  }
+  .warek-grid, .kaprodi-grid {
+    grid-template-columns: repeat(2, 1fr); /* Menjadi 2 kolom pada tablet */
+    gap: 20px;
+    padding-inline: 15px;
+  }
+
+  .kaprodi-grid-atas, 
+  .kaprodi-grid-bawah {
+    grid-template-columns: repeat(2, 1fr); /* Otomatis membagi 2 kolom seimbang di tablet */
+    gap: 20px;
+    padding-inline: 15px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .pimpinan-page {
+    padding-top: 110px;
+  }
+  
+  .pimpinan-title {
+    font-size: 26px;
+  }
+  
+  .pimpinan-subtitle {
+    font-size: 14.5px;
+    margin-bottom: 35px;
+    padding-inline: 15px;
+  }
+
+  /* Runtuh Menjadi 1 Kolom Penuh Vertikal ke Bawah Semua Tingkatan di HP */
+  .rektor-row, .warek-grid, .staff-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding-inline: 20px;
+  }
+  
+  .pcontent, .pimpinan-card {
+    width: 100% !important;
+    max-width: 320px;
+  }
+  
+  .pimpinan-img {
+    height: 380px; /* Dipertinggi sedikit di layar HP agar proporsional wajah terlihat jelas */
+  }
+
+  .rektor-row, .warek-grid, .kaprodi-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding-inline: 20px;
+  }
+  
+  .pimpinan-card {
+    width: 100% !important;
+    max-width: 320px;
+  }
+
+  .kaprodi-grid-atas, 
+  .kaprodi-grid-bawah {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding-inline: 20px;
+  }
+
+}
+
+
+/* ==========================================================================
+   HALAMAN MAINTENANCE / SEDANG PERBAIKAN (KALENDER AKADEMIK)
+   ========================================================================== */
+.maintenance-page {
+  padding-top: 160px;
+  padding-bottom: 100px;
+  background-color: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.maintenance-box {
+  background-color: #ffffff;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.04);
+  border: 1px solid #eeeeee;
+  text-align: center;
+}
+
+/* Animasi Ikon Mekanik */
+.maintenance-icons {
+  position: relative;
+  width: 120px;
+  height: 100px;
+  margin: 0 auto 30px auto;
+}
+
+.maintenance-icons i {
+  position: absolute;
+}
+
+.maintenance-icons .gear-large {
+  font-size: 55px;
+  color: #000080; /* Biru Dongker IASI */
+  left: 15px;
+  top: 10px;
+  animation: spinClockwise 4s linear infinite;
+}
+
+.maintenance-icons .gear-small {
+  font-size: 35px;
+  color: orangered; /* Oranye IASI */
+  right: 20px;
+  bottom: 15px;
+  animation: spinCounterClockwise 3s linear infinite;
+}
+
+.maintenance-icons .icon-calendar {
+  font-size: 24px;
+  color: #333333;
+  left: 31px;
+  top: 26px;
+  z-index: 5;
+}
+
+/* Teks Eksplanasi */
+.maintenance-box h1 {
+  font-size: 30px;
+  color: #000080;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.maintenance-line {
+  width: 60px;
+  height: 3px;
+  background-color: orangered;
+  margin: 0 auto 25px auto;
+  border-radius: 5px;
+}
+
+.maintenance-box p {
+  font-size: 15px;
+  color: #555555;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.maintenance-box .sub-text {
+  font-size: 14px;
+  color: #999999;
+  font-weight: 500;
+  margin-bottom: 35px;
+}
+
+/* Tombol Kembali Beranda */
+.btn-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background-color: #000080;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14.5px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-back:hover {
+  background-color: orangered;
+  transform: translateY(-2px);
+}
+
+/* --- KEYFRAMES ANIMASI PUTARAN GUR --- */
+@keyframes spinClockwise {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes spinCounterClockwise {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+/* Responsif Mobile HP */
+@media (max-width: 768px) {
+  .maintenance-page {
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
+  .maintenance-box {
+    padding: 35px 20px;
+    margin-inline: 10px;
+  }
+  .maintenance-box h1 {
+    font-size: 22px;
+  }
+  .maintenance-box p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+/* halaman dosen */
+
+/* Penyesuaian Ikon Dosen Melayang di Tengah Gir */
+.maintenance-icons .icon-instructor {
+  font-size: 26px;
+  color: #333333;
+  left: 32px;
+  top: 25px;
+  z-index: 5;
+}
+
+/* Penyelarasan warna khusus untuk visualisasi halaman dosen (opsional jika dibutuhkan) */
+.text-dosen-theme .gear-large {
+  color: #000080;
+}
+
+.text-dosen-theme .gear-small {
+  color: orangered;
+}
