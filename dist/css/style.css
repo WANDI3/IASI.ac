@@ -192,9 +192,10 @@
   padding: 100px 20px;
   color: white;
 } */
-
-.hero-box {
+.hero{
   background-image: linear-gradient(rgba(0, 0, 0, 0.541), rgba(0, 0, 0, 0.116)), url('/assets/images/iasi.webp');
+}
+.hero-box {
   width: 100%;
   border-radius: 25px;
   padding: 100px 20px;
