@@ -192,14 +192,18 @@
   padding: 100px 20px;
   color: white;
 } */
-/* .hero{
-} */
+
 .hero-box {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.541), rgba(0, 0, 0, 0.116)), url('/assets/images/iasi.webp');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.541), rgba(0, 0, 0, 0.116)), url(/assets/images/iasi.webp);
   width: 100%;
   border-radius: 25px;
   padding: 100px 20px;
   color: white;
+  
+  /* --- KUNCI PERBAIKAN BACKGROUND GAMBAR --- */
+  background-repeat: no-repeat;  /* Mencegah gambar berulang/double di kanan-kiri */
+  background-size: cover;        /* Memaksa gambar menutup seluruh area box secara proporsional */
+  background-position: center;   /* Memastikan pusat gerbang kampus tetap di tengah */
 }
 
 .hero-box h1 {
