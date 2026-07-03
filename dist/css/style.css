@@ -239,6 +239,22 @@
   transition: all 0.3s ease;
 }
 
+.akademik-box .box{
+  display: block;          /* Memastikan card mengambil ruang secara penuh */
+  text-decoration: none;   /* Menghilangkan garis bawah link bawaan */
+  color: #333333;          /* Menentukan warna default teks deskripsi */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); /* Diperhalus sedikit shadow-nya */
+  border-radius: 20px;     /* Disamakan rapi dengan border radius gambar */
+  background-color: #fff;  /* Memastikan background tetap putih */
+  overflow: hidden;        /* Memotong sudut gambar agar mengikuti radius box */
+  transition: all 0.3s ease; /* Animasi halus saat di-hover */
+}
+
+.akademik-box .box{ /* <-- BARIS SALAH/REDUNDAN (Sekitar Baris 246) */
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.377);
+  border-radius: 10px;
+}
+
 .hero-box .hero-buttons a:hover {
   background-color: white;
   color: orangered;
@@ -1980,22 +1996,149 @@ footer{
   }
 }
 
-/* halaman dosen */
+/* ==========================================================================
+   HALAMAN KHUSUS STRUKTUR DIREKTORI DOSEN
+   ========================================================================== */
 
-/* Penyesuaian Ikon Dosen Melayang di Tengah Gir */
-.maintenance-icons .icon-instructor {
-  font-size: 26px;
-  color: #333333;
-  left: 32px;
-  top: 25px;
-  z-index: 5;
+.dosen-page-body {
+  background-color: #fafafa;
 }
 
-/* Penyelarasan warna khusus untuk visualisasi halaman dosen (opsional jika dibutuhkan) */
-.text-dosen-theme .gear-large {
-  color: #000080;
+/* Jumbotron Header Section */
+.dosen-header-section {
+  padding-top: 140px;
+  padding-bottom: 20px;
+  text-align: center;
 }
 
-.text-dosen-theme .gear-small {
+.dosen-main-title {
+  font-size: 36px;
+  color: #000080; /* Warna biru dongker IASI */
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.dosen-subtitle {
+  color: #666666;
+  font-size: 16px;
+  max-width: 750px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+}
+
+/* Wrapper Area Konten Kartu Dosen */
+.dosen-container-content {
+  padding-bottom: 80px;
+}
+
+.prodi-dosen-group {
+  background-color: #ffffff;
+  padding: 35px;
+  border-radius: 20px;
+  border: 1px solid #eeeeee;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.02);
+  margin-bottom: 5px; /* Jarak proporsional antar kelompok rumpun prodi */
+}
+
+/* Judul Setiap Rumpun Kelompok Dosen */
+.prodi-dosen-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  padding-left: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.prodi-dosen-title i {
+  font-size: 20px;
+}
+
+/* Grid Layout Penata Kartu-Kartu Dosen */
+.dosen-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Default desktop: 4 kolom berjejer */
+  gap: 25px;
+}
+
+/* === MODIFIKASI TOKENS WARNA SUB-TEMA PRODI BERDASARKAN DOKUMEN ASLI === */
+
+/* 1. Kelompok Dosen S1 Ilmu Hukum (Tema Merah Crimson) */
+.prodi-hukum-group .prodi-dosen-title {
+  color: #a6192e;
+  border-left: 4px solid #a6192e;
+}
+.prodi-hukum-group .leader-line {
+  background-color: #a6192e;
+}
+
+/* 2. Kelompok Dosen S1 Manajemen (Tema Royal Blue) */
+.prodi-manajemen-group .prodi-dosen-title {
+  color: #0050b4;
+  border-left: 4px solid #0050b4;
+}
+.prodi-manajemen-group .leader-line {
+  background-color: #0050b4;
+}
+
+/* 3. Kelompok Dosen S1 Pendidikan Bahasa Indonesia (Tema Orangered) */
+.prodi-bahasa-group .prodi-dosen-title {
   color: orangered;
+  border-left: 4px solid orangered;
 }
+.prodi-bahasa-group .leader-line {
+  background-color: orangered;
+}
+
+/* 4. Kelompok Dosen D3 Kebidanan (Tema Hijau Toska / Teal) */
+.prodi-kebidanan-group .prodi-dosen-title {
+  color: #2ec4b6;
+  border-left: 4px solid #2ec4b6;
+}
+.prodi-kebidanan-group .leader-line {
+  background-color: #2ec4b6;
+}
+
+
+/* ==========================================================================
+   MEDIA QUERIES (DESAIN RESPONSIF UNTUK LAYAR HP & TABLET)
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+  .dosen-cards-grid {
+    grid-template-columns: repeat(3, 1fr); /* Tampilan tablet besar: 3 kolom */
+    gap: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .dosen-cards-grid {
+    grid-template-columns: repeat(2, 1fr); /* Tampilan tablet sedang: 2 kolom */
+  }
+  .prodi-dosen-group {
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dosen-header-section {
+    padding-top: 110px;
+  }
+  .dosen-main-title {
+    font-size: 26px;
+  }
+  .dosen-subtitle {
+    font-size: 14.5px;
+    padding-inline: 10px;
+  }
+  .prodi-dosen-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .dosen-cards-grid {
+    grid-template-columns: 1fr; /* Tampilan HP: 1 kolom penuh vertikal ke bawah */
+    justify-items: center;
+  }
+}
+

@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar Dosen - Institut Asyifa Indonesia (IASI)</title>
 
+    <!-- Fav Icon -->
     <link rel="shortcut icon" href="assets/icon/iasi.png" type="image/png">
 
+    <!-- CSS Utama & CSS Spesifik Dosen -->
     <link rel="stylesheet" href="dist/css/style.css">
-
+    
+    <!-- Font Poppins & Font Awesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -19,16 +22,18 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- AOS CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
   </head>
-  <body>
+  <body class="dosen-page-body">
     
+    <!-- NAVBAR -->
     <div class="navbar">
       <div class="container">
         <div class="navbar-box">
           <div class="logo">
             <a href="index.html">
-              <img src="assets/images/iasi.png" alt="Logo IASI">
+              <img src="assets/images/iasi.png" alt="Logo IASI"/>
             </a>
           </div>
           <button class="menu-toggle" id="menu-toggle">
@@ -61,31 +66,154 @@
       </div>
     </div>
 
-    <div class="maintenance-page">
-      <div class="container">
-        <div class="maintenance-box" data-aos="zoom-in" data-aos-duration="1000">
-          
-          <div class="maintenance-icons text-dosen-theme">
-            <i class="fa-solid fa-gear gear-large"></i>
-            <i class="fa-solid fa-gear gear-small"></i>
-            <i class="fa-solid fa-user-tie icon-instructor"></i>
-          </div>
-
-          <h1>Halaman Sedang Perbaikan</h1>
-          <div class="maintenance-line"></div>
-          
-          <p>
-            Mohon maaf atas ketidaknyamanan Anda. Saat ini halaman <strong>Direktori & Profil Dosen</strong> sedang dalam proses pembaruan data struktural, pemetaan keahlian, dan sinkronisasi pangkalan data akademik terbaru.
-          </p>
-          
-          <p class="sub-text">Kami akan segera kembali menampilkan profil tenaga pendidik terbaik kami secepatnya!</p>
-          
-          <a href="index.html" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda</a>
-          
-        </div>
+    <!-- JUMBOTRON HEADER -->
+    <div class="dosen-header-section">
+      <div class="container" data-aos="fade-up" data-aos-duration="1000">
+        <h1 class="dosen-main-title">Daftar Dosen & Tenaga Pendidik</h1>
+        <p class="dosen-subtitle">Para pakar, praktisi, dan akademisi yang berdedikasi tinggi dalam membimbing mahasiswa menuju Indonesia Emas 2045.</p>
       </div>
     </div>
 
+    <!-- KONTEN UTAMA DIREKTORI DOSEN -->
+    <div class="dosen-container-content">
+      <div class="container">
+        
+        <!-- Rumpun 1: S1 Ilmu Hukum -->
+         
+        <section class="prodi-dosen-group prodi-hukum-group" data-aos="fade-up" data-aos-duration="1000">
+          <h2 class="prodi-dosen-title"><i class="fa-solid fa-gavel"></i> S1 Ilmu Hukum</h2>
+          <div class="dosen-cards-grid">
+            
+            <div class="pimpinan-card">
+              <div class="pimpinan-img">
+                <img src="assets/images/hukum.jpeg" alt="Foto Dosen" />
+              </div>
+              <div class="pimpinan-info">
+                <h3>Kadroni, S.H., M.H.</h3>
+                <p class="jabatan">Ketua Program Studi S1 Ilmu Hukum</p>
+                <div class="leader-line"></div>
+              </div>
+            </div>
+
+            <div class="pimpinan-card">
+              <div class="pimpinan-img">
+                <img src="assets/images/dosen2.webp" alt="Foto Dosen" />
+              </div>
+              <div class="pimpinan-info">
+                <h3>Nama Dosen Hukum 2, Gelar.</h3>
+                <p class="jabatan">Dosen Tetap Ilmu Hukum</p>
+                <div class="leader-line"></div>
+              </div>
+            </div>
+
+            <div class="pimpinan-card">
+              <div class="pimpinan-img">
+                <img src="assets/images/hukum/aris purnomo sh mh.jpeg" alt="Foto Dosen" />
+              </div>
+              <div class="pimpinan-info">
+                <h3>Aris Purnomo, S. H, M. H.</h3>
+                <p class="jabatan">Dosen Tetap Ilmu Hukum</p>
+                <div class="leader-line"></div>
+              </div>
+            </div>
+
+            <div class="pimpinan-card">
+              <div class="pimpinan-img">
+                <img src="assets/images/dosen2.webp" alt="Foto Dosen" />
+              </div>
+              <div class="pimpinan-info">
+                <h3>Nama Dosen Hukum 2, Gelar.</h3>
+                <p class="jabatan">Dosen Tetap Ilmu Hukum</p>
+                <div class="leader-line"></div>
+              </div>
+            </div>
+
+            <div class="pimpinan-card">
+              <div class="pimpinan-img">
+                <img src="assets/images/dosen2.webp" alt="Foto Dosen" />
+              </div>
+              <div class="pimpinan-info">
+                <h3>Nama Dosen Hukum 2, Gelar.</h3>
+                <p class="jabatan">Dosen Tetap Ilmu Hukum</p>
+                <div class="leader-line"></div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Rumpun 2: S1 Manajemen -->
+        <section class="prodi-dosen-group prodi-manajemen-group" data-aos="fade-up" data-aos-duration="1000">
+          <h2 class="prodi-dosen-title"><i class="fa-solid fa-chart-line"></i> S1 Manajemen</h2>
+          <div class="dosen-cards-grid">
+            
+            <div class="pimpinan-card">
+              <div class="pimpinan-img">
+                <img src="assets/images/dosen3.webp" alt="Foto Dosen" />
+              </div>
+              <div class="pimpinan-info">
+                <h3>Nama Dosen Manajemen 1, Gelar.</h3>
+                <p class="jabatan">Dosen Tetap Manajemen</p>
+                <div class="leader-line"></div>
+              </div>
+            </div>
+
+            <div class="pimpinan-card">
+              <div class="pimpinan-img">
+                <img src="assets/images/dosen4.webp" alt="Foto Dosen" />
+              </div>
+              <div class="pimpinan-info">
+                <h3>Nama Dosen Manajemen 2, Gelar.</h3>
+                <p class="jabatan">Dosen Tetap Manajemen</p>
+                <div class="leader-line"></div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Rumpun 3: S1 Pendidikan Bahasa Indonesia -->
+        <section class="prodi-dosen-group prodi-bahasa-group" data-aos="fade-up" data-aos-duration="1000">
+          <h2 class="prodi-dosen-title"><i class="fa-solid fa-language"></i> S1 Pendidikan Bahasa Indonesia</h2>
+          <div class="dosen-cards-grid">
+            
+            <div class="pimpinan-card">
+              <div class="pimpinan-img">
+                <img src="assets/images/dosen5.webp" alt="Foto Dosen" />
+              </div>
+              <div class="pimpinan-info">
+                <h3>Nama Dosen Bahasa 1, Gelar.</h3>
+                <p class="jabatan">Dosen Tetap Pendidikan Bahasa</p>
+                <div class="leader-line"></div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Rumpun 4: D3 Kebidanan -->
+        <section class="prodi-dosen-group prodi-kebidanan-group" data-aos="fade-up" data-aos-duration="1000">
+          <h2 class="prodi-dosen-title"><i class="fa-solid fa-user-nurse"></i> D3 Kebidanan</h2>
+          <div class="dosen-cards-grid">
+            
+            <div class="pimpinan-card">
+              <div class="pimpinan-img">
+                <img src="assets/images/dosen6.webp" alt="Foto Dosen" />
+              </div>
+              <div class="pimpinan-info">
+                <h3>Nama Bidan Dosen 1, Gelar.</h3>
+                <p class="jabatan">Dosen Tetap Kebidanan</p>
+                <div class="leader-line"></div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- FOOTER -->
     <footer>
       <div class="container" id="kontak">
         <div class="footer-box">
@@ -130,6 +258,12 @@
       </div>
     </footer>
 
+    <!-- SCROLL UP BUTTON -->
+    <a href="#beranda" class="scroll-up">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- JS -->
     <script src="dist/js/script.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
